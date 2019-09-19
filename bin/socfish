@@ -68,7 +68,7 @@ then
 {
 cd ~/socfish
 } &> /dev/null
-bash fisher.sh
+bash socfish.sh
 else
 {
 ASESR="$( timeout -s SIGTERM 40 curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
