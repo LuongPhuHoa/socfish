@@ -2,7 +2,7 @@
 
 # 
 #            --------------------------------------------------
-#                        Camera Snapshot (fisher)                
+#                          Social Fisher (SocFish)                
 #            --------------------------------------------------
 #          Copyright (C) <2019>  <Entynetproject (Ivan Nikolsky)>
 #
@@ -41,19 +41,19 @@
 #white start
         WHS="\033[0;97m"
 	
-printf '\033]2;Camera Snapshot\a'
+printf '\033]2;Social Fisher\a'
 
 if [[ "$1" = "-u" || "$1" = "--update" ]]
 then
 sleep 1
 echo ""$GNS"["$CE"+"$GSA"] Installing update..."$CE""
 {
-rm -r ~/fisher
-rm /bin/fisher
-rm /usr/local/bin/fisher
+rm -r ~/socfish
+rm /bin/socfish
+rm /usr/local/bin/socfish
 cd ~
-git clone https://github.com/entynetproject/fisher.git
-cd fisher
+git clone https://github.com/entynetproject/socfish.git
+cd socfish
 chmod +x install.sh
 ./install.sh
 } &> /dev/null
@@ -63,12 +63,12 @@ exit
 fi
 
 cd ~
-if [[ -d ~/fisher ]]
+if [[ -d ~/socfish ]]
 then
 {
-cd ~/fisher
+cd ~/socfish
 } &> /dev/null
-bash fisher.sh
+sh fisher.sh
 else
 {
 ASESR="$( timeout -s SIGTERM 40 curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
@@ -77,10 +77,10 @@ if [[ "$ASESR" != "" ]]
 then 
 cd ~
 {
-git clone https://github.com/entynetproject/fisher.git
-cd ~/fisher
+git clone https://github.com/entynetproject/socfish.git
+cd ~/socfish
 } &> /dev/null
-bash fisher.sh
+sh socfish.sh
 else
 cd ~
 sleep 1
