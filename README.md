@@ -1,4 +1,4 @@
-# Camera Snapshot (fisher)
+# Social Fisher (SocFish)
 
                                                                             
 
@@ -27,11 +27,11 @@
  </a>
 </p>
 
-# About camera snapshot
+# About social fisher
 
     INFO:  
 
-# How to install fisher
+# How to install SocFish
 
     INFO: Social Fisher will be installed into /bin and 
     /usr/local/bin as /bin/socfish and /usr/local/bin/socfish!
@@ -42,15 +42,15 @@
 
 > ./install.sh
 
-# How to execute socfish
+# How to execute SocFish
 
-    INFO: To execute socfish you should to 
+    INFO: To execute SocFish you should to 
     have php, openssh and wget installed!
 
-> fisher
+> socfish
 
     INFO: If some dependencies will not 
-    be installed, fisher will not work!
+    be installed, SocFish will not work!
 
 # Terms of use
 
@@ -61,7 +61,7 @@
 # Social fisher license
 
         --------------------------------------------------
-                    Camera Snapshot (fisher)         
+                     Social Fisher (SocFish)         
         --------------------------------------------------
       Copyright (C) <2019>  <Entynetproject (Ivan Nikolsky)>
 
