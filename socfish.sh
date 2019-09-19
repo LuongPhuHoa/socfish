@@ -1,6 +1,6 @@
 #!/bin/bash
 
-trap 'printf "\n";stop;exit 1'
+trap 'printf "\n";stop;exit 1' 2
 clear
 
 
