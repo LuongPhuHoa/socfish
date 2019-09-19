@@ -45,23 +45,23 @@ sleep 1
 exit
 fi
 
-if [[ -d ~/fisher ]]
+if [[ -d ~/socfish ]]
 then
-cd ~/fisher
+cd ~/socfish
 {
-cp bin/fisher /usr/local/bin
-chmod +x /usr/local/bin/fisher
-cp bin/fisher /bin
-chmod +x /bin/fisher
+cp bin/socfish /usr/local/bin
+chmod +x /usr/local/bin/socfish
+cp bin/socfish /bin
+chmod +x /bin/socfish
 } &> /dev/null
 else
 cd ~
 {
-git clone https://github.com/entynetproject/fisher.git
-cd  ~/fisher
-cp bin/fisher /usr/local/bin
-chmod +x /usr/local/bin/fisher
-cp bin/fisher /bin
-chmod +x /bin/fisher
+git clone https://github.com/entynetproject/socfish.git
+cd  ~/socfish
+cp bin/socfish /usr/local/bin
+chmod +x /usr/local/bin/socfish
+cp bin/socfish /bin
+chmod +x /bin/socfish
 } &> /dev/null
 fi
