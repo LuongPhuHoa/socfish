@@ -137,6 +137,8 @@ cat banner.txt
 echo -e "\033[1;77mSocial Fisher\033[0m -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-"
 echo -e "\033[1;77mBy Entynetproject\033[0m -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~"
 printf "\n"
+cd 
+cd socfish
 
 }
 
