@@ -2,7 +2,7 @@
 
 # 
 #            --------------------------------------------------
-#                        Camera Snapshot (fisher)                
+#                         Social Fisher (SocFish)                
 #            --------------------------------------------------
 #          Copyright (C) <2019>  <Entynetproject (Ivan Nikolsky)>
 #
@@ -46,7 +46,7 @@ exit
 fi
 
 {
-rm /bin/fisher
-rm /usr/local/bin/fisher
-rm -r ~/fisher
+rm /bin/socfish
+rm /usr/local/bin/socfish
+rm -r ~/socfish
 } &> /dev/null
