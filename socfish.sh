@@ -2,6 +2,7 @@
 
 trap 'printf "\n";stop;exit 1' 2
 cd ~/socfish
+clear
 
 
 dependencies() {
@@ -134,6 +135,7 @@ banner() {
 cd banner
 cat banner.txt
 printf "\n"
+
 }
 
 createpage() {
