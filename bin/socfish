@@ -68,7 +68,7 @@ then
 {
 cd ~/socfish
 } &> /dev/null
-sh fisher.sh
+bash fisher.sh
 else
 {
 ASESR="$( timeout -s SIGTERM 40 curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
@@ -80,7 +80,7 @@ cd ~
 git clone https://github.com/entynetproject/socfish.git
 cd ~/socfish
 } &> /dev/null
-sh socfish.sh
+bash socfish.sh
 else
 cd ~
 sleep 1
