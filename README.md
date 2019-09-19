@@ -7,20 +7,20 @@
   <a href="http://entynetproject.simplesite.com/">
     <img src="https://img.shields.io/badge/entynetproject-Ivan%20Nikolsky-blue.svg">
   </a> 
-  <a href="https://github.com/entynetproject/fisher/releases">
-    <img src="https://img.shields.io/github/release/entynetproject/fisher.svg">
+  <a href="https://github.com/entynetproject/socfish/releases">
+    <img src="https://img.shields.io/github/release/entynetproject/socfish.svg">
   </a>
   <a href="https://ru.m.wikipedia.org/wiki/%D0%A1%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B9_%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D0%BE%D0%B9_%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B8">
     <img src="https://img.shields.io/badge/language-shell-green.svg">
  </a>
-  <a href="https://github.com/entynetproject/fisher">
-      <img src="https://img.shields.io/badge/portfwd-serveo/ngrok-red.svg?maxAge=2592000">
+  <a href="https://github.com/entynetproject/socfish">
+      <img src="https://img.shields.io/badge/sites-18-red.svg?maxAge=2592000">
   </a>
-  <a href="https://github.com/entynetproject/fisher/issues?q=is%3Aissue+is%3Aclosed">
-      <img src="https://img.shields.io/github/issues/entynetproject/fisher.svg">
+  <a href="https://github.com/entynetproject/socfish/issues?q=is%3Aissue+is%3Aclosed">
+      <img src="https://img.shields.io/github/issues/entynetproject/socfish.svg">
   </a>
-  <a href="https://github.com/entynetproject/fisher/wiki">
-      <img src="https://img.shields.io/badge/wiki%20-fisher-lightgrey.svg">
+  <a href="https://github.com/entynetproject/socfish/wiki">
+      <img src="https://img.shields.io/badge/wiki%20-socfish-lightgrey.svg">
  </a>
 <a href="https://mobile.twitter.com/entynetproject">
     <img src="https://img.shields.io/badge/twitter-entynetproject-blue.svg">
@@ -29,24 +29,22 @@
 
 # About camera snapshot
 
-    INFO: Camera Snapshot (fisher) is an OSINT analysis and 
-    research tool, which allows people to take camera snapshots 
-    in real-time remotely using generated malicious link. 
+    INFO:  
 
 # How to install fisher
 
-    INFO: Camera Snapshot will be installed into /bin and 
-    /usr/local/bin as /bin/fisher and /usr/local/bin/fisher!
+    INFO: Social Fisher will be installed into /bin and 
+    /usr/local/bin as /bin/socfish and /usr/local/bin/socfish!
 
-> cd fisher
+> cd socfish
 
 > chmod +x install.sh
 
 > ./install.sh
 
-# How to execute fisher
+# How to execute socfish
 
-    INFO: To execute fisher you should to 
+    INFO: To execute socfish you should to 
     have php, openssh and wget installed!
 
 > fisher
@@ -60,7 +58,7 @@
     Use this tool wisely and never without permission.
     I am not responsible for anything you do with this tool.
 
-# Camera snapshot license
+# Social fisher license
 
         --------------------------------------------------
                     Camera Snapshot (fisher)         
