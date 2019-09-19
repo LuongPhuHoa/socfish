@@ -1,6 +1,7 @@
 #!/bin/bash
 
 trap 'printf "\n";stop;exit 1' 2
+cd ~/socfish
 
 
 dependencies() {
