@@ -29,7 +29,9 @@
 
 # About social fisher
 
-    INFO:  
+    INFO: Social Fisher (SocFish) is an OSINT analysis and 
+    research tool, which allows people to get target's social 
+    network login and password using generated malicious link.
 
 # How to install SocFish
 
