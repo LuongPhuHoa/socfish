@@ -326,8 +326,6 @@ $(which sh) -c 'ssh -o StrictHostKeyChecking=no -o ServerAliveInterval=60 -R 80:
 sleep 10
 send_link=$(grep -o "https://[0-9a-z]*\.serveo.net" sendlink)
 printf '\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] Direct link:\e[0m\e[1;77m %s \n' $send_link
-send_ip=$(curl -s http://tinyurl.com/create.php?url=$send_link | head -n1)
-printf '\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] Direct link (tinyurl):\e[0m\e[1;77m %s \n' $send_ip
 checkfound
 
 
