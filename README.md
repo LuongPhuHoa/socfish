@@ -38,7 +38,7 @@
 
     INFO: Social Fisher (SocFish) is a phishing tool, 
     which allows people to get target's social network 
-    creditials using generated malicious link.
+    credentials using generated malicious link.
 
 # How to install SocFish
 
