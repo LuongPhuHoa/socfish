@@ -51,6 +51,15 @@
 
 > ./install.sh
 
+# How to uninstall SocFish
+
+> cd socfish
+
+> chmod +x uninstall.sh
+
+> ./uninstall.sh
+
+
 # How to execute SocFish
 
     INFO: To execute SocFish you should to 
