@@ -431,6 +431,7 @@ elif [[ $option_server == 2 || $option_server == 02 ]]; then
 start
 else
 clear
+banner
 start1
 fi
 
