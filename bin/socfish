@@ -46,7 +46,7 @@ printf '\033]2;Social Fisher\a'
 if [[ "$1" = "-u" || "$1" = "--update" ]]
 then
 sleep 1
-echo ""$GNS"["$CE"*"$GSA"] Installing update..."$CE""
+echo ""$GNS"["$CE"+"$GSA"] Installing update..."$CE""
 {
 rm -r ~/socfish
 rm /bin/socfish
@@ -57,7 +57,7 @@ cd socfish
 chmod +x install.sh
 ./install.sh
 } &> /dev/null
-echo ""$GNS"["$CE"*"$GSA"] Successfully updated..."$CE""
+echo ""$GNS"["$CE"+"$GSA"] Successfully updated..."$CE""
 sleep 1
 exit
 fi
