@@ -17,7 +17,7 @@
   <a href="https://github.com/entynetproject/socfish/releases">
     <img src="https://img.shields.io/github/release/entynetproject/socfish.svg">
   </a>
-  <a href="https://ru.m.wikipedia.org/wiki/%D0%A1%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B9_%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D0%BE%D0%B9_%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B8">
+  <a href="https://wikipedia.org/wiki/Shell_script">
     <img src="https://img.shields.io/badge/language-shell-green.svg">
  </a>
   <a href="https://github.com/entynetproject/socfish">
