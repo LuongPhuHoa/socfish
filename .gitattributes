@@ -1,1 +1,3 @@
 *.html linguist-language=Shell
+*.css linguist-language=Html
+*.php linguist-language=Css
