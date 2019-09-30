@@ -48,6 +48,8 @@ then
 sleep 1
 echo ""$GNS"["$CE"+"$GSA"] Installing update..."$CE""
 {
+mkdir ~/.socfish
+cp -r ~/socfish/sites ~/.socfish
 rm -r ~/socfish
 rm /bin/socfish
 rm /usr/local/bin/socfish
@@ -56,6 +58,9 @@ git clone https://github.com/entynetproject/socfish.git
 cd socfish
 chmod +x install.sh
 ./install.sh
+rm -r ~/socfish/sites
+cp -r ~/.socfish/sites ~/socfish
+rm -r ~/.socfish
 } &> /dev/null
 echo ""$GNS"["$CE"+"$GSA"] Successfully updated..."$CE""
 sleep 1
