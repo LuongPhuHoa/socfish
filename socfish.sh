@@ -41,6 +41,8 @@ git clone https://github.com/entynetproject/socfish.git
 } &> /dev/null
 fi
 
+cd ~/socfish
+
 dependencies() {
 
 command -v php > /dev/null 2>&1 || { echo >&2 "Error, php is not installed! Aborting..."; exit 1; }
@@ -170,12 +172,9 @@ fi
 
 banner() {
 
-cd banner
-cat banner.txt
+cat banner/banner.txt
 echo -e "\033[1;77mSocial Fisher\033[0m"
 echo -e "\033[1;77mBy Entynetproject\033[0m"
-cd 
-cd socfish
 
 }
 
