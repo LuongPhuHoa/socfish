@@ -31,17 +31,7 @@
 trap 'printf "\n";stop;exit 1' 2
 clear
 
-if [[ -d ~/socfish ]]
-then
-sleep 0
-else
-cd ~
-{
-git clone https://github.com/entynetproject/socfish.git
-} &> /dev/null
-fi
-
-cd ~/socfish
+printf '\033]2;Social Fisher\a'
 
 dependencies() {
 
