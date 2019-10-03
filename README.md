@@ -62,17 +62,17 @@
 
 # How to execute SocFish
 
-    INFO: To execute SocFish you should to 
-    have php, openssh and wget installed!
+    INFO: To execute SocFish you should to have 
+    php, openssh, unzip and wget installed!
 
-> socfish
+> $ socfish
 
 # How to update SocFish
 
     INFO: If you update SocFish, all 
     data will be saved. Do not worry!
 
-> socfish -u
+> $ socfish -u
 
 # Terms of use
 
