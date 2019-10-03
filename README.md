@@ -67,8 +67,12 @@
 
 > socfish
 
-    INFO: If some dependencies will not 
-    be installed, SocFish will not work!
+# How to update SocFish
+
+    INFO: If you update SocFish, all 
+    data will be saved. Do not worry!
+
+> socfish -u
 
 # Terms of use
 
