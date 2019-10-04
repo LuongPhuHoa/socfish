@@ -1,13 +1,14 @@
-# Social Fisher (SocFish)
+# Social Fisher (SocFish)              #
 
-                                                       '\
-                                                      '  \   {)
-                                                    '     \@  |     _   
-                                                  '     ___`\/|______\   
-                                                '       \-=-=-=-=-=-/{}
-                                              '
-                                        Social Fisher 
-                                        By Entynetproject 
+                                    ____             _____ _     _     
+                                   / ___|  ___   ___|  ___(_)___| |__  
+                                   \___ \ / _ \ / __| |_  | / __| '_ \ 
+                                    ___) | (_) | (__|  _| | \__ \ | | |
+                                   |____/ \___/ \___|_|   |_|___/_| |_|
+                                        
+                                       Developed by Entynetproject                
+                                             (Ivan Nikolsky)                
+
 
 <h4 align="center">Details</h4>
 <p align="center">
