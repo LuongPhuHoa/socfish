@@ -120,8 +120,17 @@ read -e -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Select your architecture (amd
 if [[ "$CONF" = "" ]]
 then
 exit
+if [[ "$CONF" = "arm" ]]
+then
+read -e -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Is this a single board computer (yes/no)? \e[0m' PI
+if [[ "$PI" = "yes" ]]
+then
+echo "amd" >> /etc/socfish.conf
+CONF="amd"
 else
 echo "$CONF" >> /etc/socfish.conf
+fi
+fi
 fi
 sleep 1
 
@@ -257,8 +266,17 @@ read -e -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Select your architecture (amd
 if [[ "$CONF" = "" ]]
 then
 exit
+if [[ "$CONF" = "arm" ]]
+then
+read -e -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Is this a single board computer (yes/no)? \e[0m' PI
+if [[ "$PI" = "yes" ]]
+then
+echo "amd" >> /etc/socfish.conf
+CONF="amd"
 else
 echo "$CONF" >> /etc/socfish.conf
+fi
+fi
 fi
 sleep 1
 
