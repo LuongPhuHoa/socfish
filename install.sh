@@ -50,7 +50,14 @@ cd ~/socfish
 } &> /dev/null
 sleep 0.5
 echo
-cat banner/banner.txt
+printf "\e[1;92m  ____            \e[0m\e[1;77m _____ _     _     \e[0m\n"
+printf "\e[1;92m / ___|  ___   ___\e[0m\e[1;77m|  ___(_)___| |__  \e[0m\n"
+printf "\e[1;92m \___ \ / _ \ / __|\e[0m\e[1;77m |_  | / __| '_ \ \e[0m\n"
+printf "\e[1;92m  ___) | (_) | (__\e[0m\e[1;77m|  _| | \__ \ | | |\e[0m\n"
+printf "\e[1;92m |____/ \___/ \___|\e[0m\e[1;77m_|   |_|___/_| |_|\e[0m\n"
+printf "\e[1;92m                       \e[0m\e[1;77m                 \e[0m\n"
+printf "\e[1;77m     Developed by Entynetproject                \e[0m\n"
+printf "\e[1;77m           (\e[0m\e[1;92mIvan Nikolsky\e[0m\e[1;77m)                \e[0m\n"
 echo
 
 if [[ -f /etc/socfish.conf ]]
@@ -186,7 +193,14 @@ cd ~/socfish
 } &> /dev/null
 sleep 0.5
 echo
-cat banner/banner.txt
+printf "\e[1;92m  ____            \e[0m\e[1;77m _____ _     _     \e[0m\n"
+printf "\e[1;92m / ___|  ___   ___\e[0m\e[1;77m|  ___(_)___| |__  \e[0m\n"
+printf "\e[1;92m \___ \ / _ \ / __|\e[0m\e[1;77m |_  | / __| '_ \ \e[0m\n"
+printf "\e[1;92m  ___) | (_) | (__\e[0m\e[1;77m|  _| | \__ \ | | |\e[0m\n"
+printf "\e[1;92m |____/ \___/ \___|\e[0m\e[1;77m_|   |_|___/_| |_|\e[0m\n"
+printf "\e[1;92m                       \e[0m\e[1;77m                 \e[0m\n"
+printf "\e[1;77m     Developed by Entynetproject                \e[0m\n"
+printf "\e[1;77m           (\e[0m\e[1;92mIvan Nikolsky\e[0m\e[1;77m)                \e[0m\n"
 echo
 
 if [[ -f /etc/socfish.conf ]]
