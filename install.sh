@@ -118,8 +118,7 @@ fi
 fi
 
 else
-
-read -p $'Select your architecture (amd/intel/arm) ' CONF
+read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Select your architecture (amd/intel/arm): \e[0m' CONF
 if [[ "$CONF" = "" ]]
 then
 exit
@@ -262,7 +261,7 @@ fi
 
 else
 
-read -p $'Select your architecture (amd/intel/arm) ' CONF
+read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Select your architecture (\e[0m\e[1;93mamd\e[0m\e[1;77m/\e[0m\e[1;93mintel\e[0m\e[1;77m/\e[0m\e[1;93marm\e[0m\e[1;92m): \e[0m' CONF
 if [[ "$CONF" = "" ]]
 then
 exit
@@ -322,10 +321,4 @@ apt-get install wget
 fi
 fi
 fi
-
-{
-pip3 install setuptools
-pip3 install -r requirements.txt
-} &> /dev/null
-
 fi
