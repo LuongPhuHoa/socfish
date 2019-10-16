@@ -35,8 +35,8 @@ printf '\033]2;Social Fisher\a'
 
 dependencies() {
 
-command -v php > /dev/null 2>&1 || { echo >&2 "Error, php is not installed! Aborting..."; exit 1; }
-command -v curl > /dev/null 2>&1 || { echo >&2 "Error, curl is not installed! Aborting..."; exit 1; }
+command -v php > /dev/null 2>&1 || { echo -e "\n\e[1;31m[\033[0m*\033[1;31m] Error, php is not installed! Aborting...\033[0m"; exit 1; }
+command -v curl > /dev/null 2>&1 || { echo -e "\n\e[1;31m[\033[0m*\033[1;31m] Error, curl is not installed! Aborting...\033[0m"; exit 1; }
 
 }
 
@@ -380,7 +380,7 @@ unzip ngrok-stable-linux-arm.zip > /dev/null 2>&1
 chmod +x ngrok
 rm -rf ngrok-stable-linux-arm.zip
 else
-printf "\e[1;93m[!] Download error... Termux, run:\e[0m\e[1;77m pkg install wget\e[0m\n"
+printf "\e[1;31m[\033[0m*\033[1;31m] Download error... Termux, run:\e[0m\e[1;77m pkg install wget\e[0m\n"
 exit 1
 fi
 
@@ -393,7 +393,7 @@ unzip ngrok-stable-linux-386.zip > /dev/null 2>&1
 chmod +x ngrok
 rm -rf ngrok-stable-linux-386.zip
 else
-printf "\e[1;93m[!] Download error... \e[0m\n"
+printf "\e[1;31m[\033[0m*\033[1;31m] Download error... \e[0m\n"
 exit 1
 fi
 fi
