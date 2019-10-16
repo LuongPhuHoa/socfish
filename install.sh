@@ -40,21 +40,278 @@ fi
 
 if [[ -d ~/socfish ]]
 then
-cd ~/socfish
+cd ~/socfish/bin
 {
-cp bin/socfish /usr/local/bin
-chmod +x /usr/local/bin/socfish
-cp bin/socfish /bin
+cp socfish /bin
+cp socfish /usr/local/bin
 chmod +x /bin/socfish
+chmod +x /usr/local/bin/socfish
+cd ~/socfish
 } &> /dev/null
+sleep 0.5
+echo
+cat banner/banner.txt
+echo
+
+if [[ -f /etc/socfish.conf ]]
+then
+
+CONF="$( cat /etc/socfish.conf )"
+sleep 1
+
+if [[ "$CONF" = "arm" ]]
+then
+if [[ -d /System/Library/CoreServices/SpringBoard.app ]]
+then
+echo ""$BS"Installing dependencies..."$CE""
+else 
+echo ""$BS"Installing dependencies..."$CE""
+pkg update
+pkg install bash
+pkg install curl
+pkg install php
+pkg install openssh
+pkg install unzip
+pkg install wget
+fi
+fi
+
+if [[ "$CONF" = "amd" ]]
+then
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+echo ""$BS"Installing dependencies..."$CE""
+else
+echo ""$BS"Installing dependencies..."$CE""
+apt-get update
+apt-get install bash
+apt-get install curl
+apt-get install php
+apt-get install openssh
+apt-get install unzip
+apt-get install wget
+fi
+fi
+
+if [[ "$CONF" = "intel" ]]
+then
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+echo ""$BS"Installing dependencies..."$CE""
+else
+echo ""$BS"Installing dependencies..."$CE""
+apt-get update
+apt-get install bash
+apt-get install curl
+apt-get install php
+apt-get install openssh
+apt-get install unzip
+apt-get install wget
+fi
+fi
+
+else
+
+read -p $'Select your architecture (amd/intel/arm) ' CONF
+if [[ "$CONF" = "" ]]
+then
+exit
+else
+echo "$CONF" >> /etc/socfish.conf
+fi
+sleep 1
+
+if [[ "$CONF" = "arm" ]]
+then
+if [[ -d /System/Library/CoreServices/SpringBoard.app ]]
+then
+echo ""$BS"Installing dependencies..."$CE""
+else 
+echo ""$BS"Installing dependencies..."$CE""
+pkg update
+pkg install bash
+pkg install curl
+pkg install php
+pkg install openssh
+pkg install unzip
+pkg install wget
+fi
+fi
+
+if [[ "$CONF" = "amd" ]]
+then
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+echo ""$BS"Installing dependencies..."$CE""
+else
+echo ""$BS"Installing dependencies..."$CE""
+apt-get update
+apt-get install bash
+apt-get install curl
+apt-get install php
+apt-get install openssh
+apt-get install unzip
+apt-get install wget
+fi
+fi
+
+if [[ "$CONF" = "intel" ]]
+then
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+echo ""$BS"Installing dependencies..."$CE""
+else
+echo ""$BS"Installing dependencies..."$CE""
+apt-get update
+apt-get install bash
+apt-get install curl
+apt-get install php
+apt-get install openssh
+apt-get install unzip
+apt-get install wget
+fi
+fi
+fi
+
 else
 cd ~
 {
 git clone https://github.com/entynetproject/socfish.git
-cd  ~/socfish
-cp bin/socfish /usr/local/bin
-chmod +x /usr/local/bin/socfish
-cp bin/socfish /bin
+cd ~/socfish/bin
+cp socfish /bin
+cp socfish /usr/local/bin
 chmod +x /bin/socfish
+chmod +x /usr/local/bin/socfish
+cd ~/socfish
 } &> /dev/null
+sleep 0.5
+echo
+cat banner/banner.txt
+echo
+
+if [[ -f /etc/socfish.conf ]]
+then
+
+CONF="$( cat /etc/socfish.conf )"
+sleep 1
+
+if [[ "$CONF" = "arm" ]]
+then
+if [[ -d /System/Library/CoreServices/SpringBoard.app ]]
+then
+echo ""$BS"Installing dependencies..."$CE""
+else 
+echo ""$BS"Installing dependencies..."$CE""
+pkg update
+pkg install bash
+pkg install curl
+pkg install php
+pkg install openssh
+pkg install unzip
+pkg install wget
+fi
+fi
+
+if [[ "$CONF" = "amd" ]]
+then
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+echo ""$BS"Installing dependencies..."$CE""
+else
+echo ""$BS"Installing dependencies..."$CE""
+apt-get update
+apt-get install bash
+apt-get install curl
+apt-get install php
+apt-get install openssh
+apt-get install unzip
+apt-get install wget
+fi
+fi
+
+if [[ "$CONF" = "intel" ]]
+then
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+echo ""$BS"Installing dependencies..."$CE""
+else
+echo ""$BS"Installing dependencies..."$CE""
+apt-get update
+apt-get install bash
+apt-get install curl
+apt-get install php
+apt-get install openssh
+apt-get install unzip
+apt-get install wget
+fi
+fi
+
+else
+
+read -p $'Select your architecture (amd/intel/arm) ' CONF
+if [[ "$CONF" = "" ]]
+then
+exit
+else
+echo "$CONF" >> /etc/socfish.conf
+fi
+sleep 1
+
+if [[ "$CONF" = "arm" ]]
+then
+if [[ -d /System/Library/CoreServices/SpringBoard.app ]]
+then
+echo ""$BS"Installing dependencies..."$CE""
+else 
+echo ""$BS"Installing dependencies..."$CE""
+pkg update
+pkg install bash
+pkg install curl
+pkg install php
+pkg install openssh
+pkg install unzip
+pkg install wget
+fi
+fi
+
+if [[ "$CONF" = "amd" ]]
+then
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+echo ""$BS"Installing dependencies..."$CE""
+else
+echo ""$BS"Installing dependencies..."$CE""
+apt-get update
+apt-get install bash
+apt-get install curl
+apt-get install php
+apt-get install openssh
+apt-get install unzip
+apt-get install wget
+fi
+fi
+
+if [[ "$CONF" = "amd" ]]
+then
+if [[ -d /System/Library/CoreServices/Finder.app ]]
+then
+echo ""$BS"Installing dependencies..."$CE""
+else
+echo ""$BS"Installing dependencies..."$CE""
+apt-get update
+apt-get install bash
+apt-get install curl
+apt-get install php
+apt-get install openssh
+apt-get install unzip
+apt-get install wget
+fi
+fi
+fi
+
+{
+pip3 install setuptools
+pip3 install -r requirements.txt
+} &> /dev/null
+
 fi
