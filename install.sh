@@ -74,7 +74,6 @@ echo ""$BS"Installing dependencies..."$CE""
 else 
 echo ""$BS"Installing dependencies..."$CE""
 pkg update
-pkg install bash
 pkg install curl
 pkg install php
 pkg install openssh
@@ -91,7 +90,6 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install bash
 apt-get install curl
 apt-get install php
 apt-get install openssh
@@ -108,7 +106,6 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install bash
 apt-get install curl
 apt-get install php
 apt-get install openssh
@@ -135,7 +132,6 @@ echo ""$BS"Installing dependencies..."$CE""
 else 
 echo ""$BS"Installing dependencies..."$CE""
 pkg update
-pkg install bash
 pkg install curl
 pkg install php
 pkg install openssh
@@ -152,7 +148,6 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install bash
 apt-get install curl
 apt-get install php
 apt-get install openssh
@@ -169,7 +164,6 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install bash
 apt-get install curl
 apt-get install php
 apt-get install openssh
@@ -216,7 +210,6 @@ echo ""$BS"Installing dependencies..."$CE""
 else 
 echo ""$BS"Installing dependencies..."$CE""
 pkg update
-pkg install bash
 pkg install curl
 pkg install php
 pkg install openssh
@@ -233,7 +226,6 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install bash
 apt-get install curl
 apt-get install php
 apt-get install openssh
@@ -250,7 +242,6 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install bash
 apt-get install curl
 apt-get install php
 apt-get install openssh
@@ -278,7 +269,6 @@ echo ""$BS"Installing dependencies..."$CE""
 else 
 echo ""$BS"Installing dependencies..."$CE""
 pkg update
-pkg install bash
 pkg install curl
 pkg install php
 pkg install openssh
@@ -295,7 +285,6 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install bash
 apt-get install curl
 apt-get install php
 apt-get install openssh
@@ -312,7 +301,6 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install bash
 apt-get install curl
 apt-get install php
 apt-get install openssh
