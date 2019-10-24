@@ -200,6 +200,8 @@ chmod +x /usr/local/bin/socfish
 cd ~/socfish
 } &> /dev/null
 sleep 0.5
+clear
+sleep 0.5
 echo
 printf "\e[1;92m  ____            \e[0m\e[1;77m _____ _     _     \e[0m\n"
 printf "\e[1;92m / ___|  ___   ___\e[0m\e[1;77m|  ___(_)___| |__  \e[0m\n"
