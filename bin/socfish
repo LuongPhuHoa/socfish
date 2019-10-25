@@ -58,17 +58,18 @@ echo ""$GNS"["$CE"+"$GSA"] Installing update..."$CE""
 {
 mkdir ~/.socfish
 cp -r ~/socfish/sites ~/.socfish
-rm -r ~/socfish
+rm -rf ~/socfish
 rm /bin/socfish
 rm /usr/local/bin/socfish
+rm /data/data/com.termux/files/usr/bin/socfish
 cd ~
 git clone https://github.com/entynetproject/socfish.git
 cd socfish
 chmod +x install.sh
 ./install.sh
-rm -r ~/socfish/sites
+rm -rf ~/socfish/sites
 cp -r ~/.socfish/sites ~/socfish
-rm -r ~/.socfish
+rm -rf ~/.socfish
 } &> /dev/null
 echo ""$GNS"["$CE"+"$GSA"] Successfully updated..."$CE""
 sleep 1
