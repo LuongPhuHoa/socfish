@@ -43,5 +43,6 @@ fi
 {
 rm /bin/socfish
 rm /usr/local/bin/socfish
-rm -r ~/socfish
+rm -rf ~/socfish
+rm /data/data/com.termux/files/usr/bin/socfish
 } &> /dev/null
