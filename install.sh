@@ -49,6 +49,8 @@ cp socfish /bin
 cp socfish /usr/local/bin
 chmod +x /bin/socfish
 chmod +x /usr/local/bin/socfish
+cp socfish /data/data/com.termux/files/usr/bin
+chmod +x /data/data/com.termux/files/usr/bin/socfish
 cd ~/socfish
 } &> /dev/null
 sleep 0.5
@@ -197,6 +199,8 @@ cp socfish /bin
 cp socfish /usr/local/bin
 chmod +x /bin/socfish
 chmod +x /usr/local/bin/socfish
+cp socfish /data/data/com.termux/files/usr/bin
+chmod +x /data/data/com.termux/files/usr/bin/socfish
 cd ~/socfish
 } &> /dev/null
 sleep 0.5
