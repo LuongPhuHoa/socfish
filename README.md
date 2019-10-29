@@ -63,8 +63,8 @@
 
 # How to execute SocFish
 
-    INFO: To execute SocFish you should 
-    execute the following command!
+    INFO: To execute Social Fisher you 
+    should execute the following command!
 
 > socfish
 
