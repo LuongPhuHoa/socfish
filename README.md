@@ -63,8 +63,8 @@
 
 # How to execute SocFish
 
-    INFO: To execute SocFish you should to have 
-    php, openssh, unzip and wget installed!
+    INFO: To execute SocFish you should 
+    execute the following command!
 
 > socfish
 
