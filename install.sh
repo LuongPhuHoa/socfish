@@ -137,6 +137,8 @@ CONF="amd"
 else
 echo "$CONF" >> /etc/socfish.conf
 fi
+else
+echo "$CONF" >> /etc/socfish.conf
 fi
 fi
 sleep 1
@@ -288,6 +290,8 @@ CONF="amd"
 else
 echo "$CONF" >> /etc/socfish.conf
 fi
+else
+echo "$CONF" >> /etc/socfish.conf
 fi
 fi
 sleep 1
