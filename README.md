@@ -70,7 +70,7 @@
 
 # How to update SocFish
 
-    INFO: If you update SocFish, all 
+    INFO: If you update SocFish, all the
     data will be saved. Do not worry!
 
 > socfish -u
