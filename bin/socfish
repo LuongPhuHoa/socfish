@@ -46,6 +46,22 @@ printf '\033]2;Social Fisher\a'
 
 if [[ "$1" = "-u" || "$1" = "--update" ]]
 then
+if [[ -d /data/data/com.termux ]]
+then
+if [[ -f /data/data/com.termux/files/usr/bin/socfish ]]
+then
+UPD="true"
+else
+UPD="false"
+fi
+else
+if [[ -f /usr/local/bin/socfish ]]
+then
+UPD="true"
+else
+UPD="false"
+fi
+fi
 {
 ASESR="$( curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
 } &> /dev/null
@@ -74,9 +90,14 @@ rm /usr/local/bin/socfish
 rm /data/data/com.termux/files/usr/bin/socfish
 cd ~
 git clone https://github.com/entynetproject/socfish.git
+if [[ "$UPD" != "true" ]]
+then
+sleep 0
+else
 cd socfish
 chmod +x install.sh
 ./install.sh
+fi
 rm -rf ~/socfish/sites
 cp -r ~/.socfish/sites ~/socfish
 rm -rf ~/.socfish
