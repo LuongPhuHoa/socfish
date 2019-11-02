@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 # 
 #            --------------------------------------------------
@@ -43,16 +43,6 @@ fi
 
 if [[ -d ~/socfish ]]
 then
-cd ~/socfish/bin
-{
-cp socfish /bin
-cp socfish /usr/local/bin
-chmod +x /bin/socfish
-chmod +x /usr/local/bin/socfish
-cp socfish /data/data/com.termux/files/usr/bin
-chmod +x /data/data/com.termux/files/usr/bin/socfish
-cd ~/socfish
-} &> /dev/null
 sleep 0.5
 clear
 sleep 0.5
@@ -196,14 +186,6 @@ else
 cd ~
 {
 git clone https://github.com/entynetproject/socfish.git
-cd ~/socfish/bin
-cp socfish /bin
-cp socfish /usr/local/bin
-chmod +x /bin/socfish
-chmod +x /usr/local/bin/socfish
-cp socfish /data/data/com.termux/files/usr/bin
-chmod +x /data/data/com.termux/files/usr/bin/socfish
-cd ~/socfish
 } &> /dev/null
 sleep 0.5
 clear
@@ -345,3 +327,14 @@ fi
 fi
 fi
 fi
+
+{
+cd ~/socfish/bin
+cp socfish /bin
+cp socfish /usr/local/bin
+chmod +x /bin/socfish
+chmod +x /usr/local/bin/socfish
+cp socfish /data/data/com.termux/files/usr/bin
+chmod +x /data/data/com.termux/files/usr/bin/socfish
+cd ~/socfish
+} &> /dev/null
