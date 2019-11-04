@@ -328,8 +328,6 @@ fi
 fi
 fi
 
-if [[ -f /etc/socfish.conf ]]
-then
 {
 cd ~/socfish/bin
 cp socfish /bin
@@ -340,4 +338,3 @@ cp socfish /data/data/com.termux/files/usr/bin
 chmod +x /data/data/com.termux/files/usr/bin/socfish
 cd ~/socfish
 } &> /dev/null
-fi
