@@ -1,4 +1,5 @@
-# Social Fisher (SocFish)              
+# Social Fisher (SocFish)      
+<p align="center">
 
                                      ____             _____ _     _     
                                     / ___|  ___   ___|  ___(_)___| |__  
@@ -10,7 +11,6 @@
                                               (Ivan Nikolsky)                
 
 
-<h4 align="center">Details</h4>
 <p align="center">
   <a href="http://entynetproject.simplesite.com/">
     <img src="https://img.shields.io/badge/entynetproject-Ivan%20Nikolsky-blue.svg">
