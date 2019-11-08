@@ -1,5 +1,4 @@
 # Social Fisher (SocFish)      
-<p align="center">
 
                                      ____             _____ _     _     
                                     / ___|  ___   ___|  ___(_)___| |__  
