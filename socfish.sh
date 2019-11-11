@@ -320,7 +320,7 @@ printf "\e[1;77m[\e[0m\e[1;33m+\e[0m\e[1;77m] Starting php server...\e[0m\n"
 cd sites/$server && php -S 127.0.0.1:$port > /dev/null 2>&1 & 
 sleep 2
 printf "\e[1;77m[\e[0m\e[1;93m+\e[0m\e[1;77m] Starting Serveo...\e[0m\n"
-command -v ssh > /dev/null 2>&1 || { echo -e "\e[1;31m[\e[0m-\e[1;31m] Error, openssh is not installed!\e[0m"; exit; }
+command -v ssh > /dev/null 2>&1 || { echo -e "\e[1;31m[\e[0m-\e[1;31m] Error, ssh is not installed!\e[0m"; exit; }
 if [[ -e sendlink ]]; then
 rm -rf sendlink
 fi
