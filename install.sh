@@ -2,7 +2,7 @@
 
 # 
 #            --------------------------------------------------
-#                          Social Fisher (socfish)                
+#                               Social Fisher              
 #            --------------------------------------------------
 #          Copyright (C) <2019>  <Entynetproject (Ivan Nikolsky)>
 #
