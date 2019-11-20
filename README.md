@@ -1,13 +1,13 @@
 # Social Fisher (SocFish)      
 
-                                     ____             _____ _     _     
-                                    / ___|  ___   ___|  ___(_)___| |__  
-                                    \___ \ / _ \ / __| |_  | / __| '_ \ 
-                                     ___) | (_) | (__|  _| | \__ \ | | |
-                                    |____/ \___/ \___|_|   |_|___/_| |_|
+                                        ____             _____ _     _     
+                                       / ___|  ___   ___|  ___(_)___| |__  
+                                       \___ \ / _ \ / __| |_  | / __| '_ \ 
+                                        ___) | (_) | (__|  _| | \__ \ | | |
+                                       |____/ \___/ \___|_|   |_|___/_| |_|
                                         
-                                        Developed by Entynetproject                
-                                              (Ivan Nikolsky)                
+                                           Developed by Entynetproject                
+                                                 (Ivan Nikolsky)                
 
 
 <p align="center">
@@ -40,7 +40,7 @@
     which allows people to get target's social network 
     credentials using generated malicious link.
 
-# How to install SocFish
+# How to install socfish
 
     INFO: Social Fisher will be installed into /bin and 
     /usr/local/bin as /bin/socfish and /usr/local/bin/socfish!
@@ -51,7 +51,7 @@
 
 > ./install.sh
 
-# How to uninstall SocFish
+# How to uninstall socfish
 
 > cd socfish
 
@@ -60,14 +60,14 @@
 > ./uninstall.sh
 
 
-# How to execute SocFish
+# How to execute socfish
 
     INFO: To execute Social Fisher you 
     should execute the following command!
 
 > socfish
 
-# How to update SocFish
+# How to update socfish
 
     INFO: If you update SocFish, all the
     data will be saved. Do not worry!
@@ -83,7 +83,7 @@
 # Social fisher license
 
         --------------------------------------------------
-                     Social Fisher (SocFish)         
+                           Social Fisher         
         --------------------------------------------------
       Copyright (C) <2019>  <Entynetproject (Ivan Nikolsky)>
 
