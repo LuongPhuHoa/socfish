@@ -28,6 +28,8 @@
 #    Email     : entynetproject@gmail.com
 #
 
+printf '\033]2;Social Fisher\a'
+
 if [[ "$1" = "-u" || "$1" = "--update" ]]
 then
 if [[ -d /data/data/com.termux ]]
@@ -93,8 +95,6 @@ fi
 
 trap 'printf "\n";stop;exit 1' 2
 clear
-
-printf '\033]2;Social Fisher\a'
 
 dependencies() {
 
