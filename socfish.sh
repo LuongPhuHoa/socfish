@@ -28,6 +28,8 @@
 #    Email     : entynetproject@gmail.com
 #
 
+printf '\033]2;Social Fisher\a'
+
 if [[ "$1" = "-u" || "$1" = "--update" ]]
 then
 chmod +x bin/socfish
