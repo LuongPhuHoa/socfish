@@ -28,6 +28,69 @@
 #    Email     : entynetproject@gmail.com
 #
 
+if [[ "$1" = "-u" || "$1" = "--update" ]]
+then
+if [[ -d /data/data/com.termux ]]
+then
+if [[ -f /data/data/com.termux/files/usr/bin/socfish ]]
+then
+UPD="true"
+else
+UPD="false"
+fi
+else
+if [[ -f /usr/local/bin/socfish ]]
+then
+UPD="true"
+else
+UPD="false"
+fi
+fi
+{
+ASESR="$( curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
+} &> /dev/null
+if [[ "$ASESR" = "" ]]
+then 
+sleep 1
+echo ""$RS"["$CE"-"$RSA"] Download failed!"$CE""
+sleep 1
+exit
+fi
+if [[ $EUID -ne 0 ]]
+then
+sleep 1
+echo ""$RS"["$CE"-"$RSA"] Permission denied!"$CE""
+sleep 1
+exit
+fi
+sleep 1
+echo ""$GNS"["$CE"+"$GSA"] Installing update..."$CE""
+{
+mkdir ~/.socfish
+cp -r ~/socfish/sites ~/.socfish
+rm -rf ~/socfish
+rm /bin/socfish
+rm /usr/local/bin/socfish
+rm /data/data/com.termux/files/usr/bin/socfish
+cd ~
+git clone https://github.com/entynetproject/socfish.git
+if [[ "$UPD" != "true" ]]
+then
+sleep 0
+else
+cd socfish
+chmod +x install.sh
+./install.sh
+fi
+rm -rf ~/socfish/sites
+cp -r ~/.socfish/sites ~/socfish
+rm -rf ~/.socfish
+} &> /dev/null
+echo ""$GNS"["$CE"+"$GSA"] Successfully updated!"$CE""
+sleep 1
+exit
+fi
+
 trap 'printf "\n";stop;exit 1' 2
 clear
 
