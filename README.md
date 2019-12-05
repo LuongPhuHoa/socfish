@@ -74,11 +74,11 @@
 
 > socfish -u
 
-# Terms of use
+# Social fisher isclaimer
 
-    This tool is only for educational purposes only.
-    Use this tool wisely and never without permission.
-    I am not responsible for anything you do with this tool.
+    INFO: Usage of the Social Fisher for attacking targets without prior mutual consent is illegal. 
+    It is the end user's responsibility to obey all applicable local, state, federal, and international laws. 
+    Developers assume no liability and are not responsible for any misuse or damage caused by this program.
 
 # Social fisher license
 
