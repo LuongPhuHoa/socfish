@@ -74,7 +74,7 @@
 
 > socfish -u
 
-# Social fisher isclaimer
+# Social fisher disclaimer
 
     INFO: Usage of the Social Fisher for attacking targets without prior mutual consent is illegal. 
     It is the end user's responsibility to obey all applicable local, state, federal, and international laws. 
