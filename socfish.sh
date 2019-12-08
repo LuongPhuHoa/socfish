@@ -1,10 +1,9 @@
 #!/bin/bash
 
-# 
 #            --------------------------------------------------
 #                               Social Fisher              
 #            --------------------------------------------------
-#          Copyright (C) <2019>  <Entynetproject (Ivan Nikolsky)>
+#                  Copyright (C) <2019>  <Entynetproject>
 #
 #        This program is free software: you can redistribute it and/or modify
 #        it under the terms of the GNU General Public License as published by
@@ -18,15 +17,6 @@
 #
 #        You should have received a copy of the GNU General Public License
 #        along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-#
-#    About Author :   
-#    Founder   : Entynetproject (Ivan Nikolsky)
-#    Site      : http://entynetproject.simplesite.com/
-#    Instagram : @entynetproject 
-#    Twitter   : @entynetproject
-#    Email     : entynetproject@gmail.com
-#
 
 printf '\033]2;Social Fisher\a'
 
@@ -174,9 +164,6 @@ printf "\e[1;92m / ___|  ___   ___\e[0m\e[1;77m|  ___(_)___| |__  \e[0m\n"
 printf "\e[1;92m \___ \ / _ \ / __|\e[0m\e[1;77m |_  | / __| '_ \ \e[0m\n"
 printf "\e[1;92m  ___) | (_) | (__\e[0m\e[1;77m|  _| | \__ \ | | |\e[0m\n"
 printf "\e[1;92m |____/ \___/ \___|\e[0m\e[1;77m_|   |_|___/_| |_|\e[0m\n"
-printf "\e[1;92m                       \e[0m\e[1;77m                 \e[0m\n"
-printf "\e[1;77m     Developed by Entynetproject                \e[0m\n"
-printf "\e[1;77m           (\e[0m\e[1;92mIvan Nikolsky\e[0m\e[1;77m)                \e[0m\n"
 
 }
 
