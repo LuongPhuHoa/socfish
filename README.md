@@ -42,9 +42,6 @@
 
 # How to install socfish
 
-    INFO: Social Fisher will be installed into /bin and 
-    /usr/local/bin as /bin/socfish and /usr/local/bin/socfish!
-
 > cd socfish
 
 > chmod +x install.sh
