@@ -4,11 +4,7 @@
                                          / ___|  ___   ___|  ___(_)___| |__  
                                          \___ \ / _ \ / __| |_  | / __| '_ \ 
                                           ___) | (_) | (__|  _| | \__ \ | | |
-                                         |____/ \___/ \___|_|   |_|___/_| |_|
-                                        
-                                             Developed by Entynetproject                
-                                                   (Ivan Nikolsky)                
-
+                                         |____/ \___/ \___|_|   |_|___/_| | |
 
 <p align="center">
   <a href="http://entynetproject.simplesite.com/">
