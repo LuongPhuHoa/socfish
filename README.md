@@ -56,14 +56,14 @@
 # How to execute socfish
 
     INFO: To execute Social Fisher you 
-    should execute the following command!
+    should execute the following command.
 
 > socfish
 
 # How to update socfish
 
-    INFO: If you update SocFish, all the
-    data will be saved. Do not worry!
+    INFO: To update Social Fisher you 
+    should execute the following command.
 
 > socfish -u
 
