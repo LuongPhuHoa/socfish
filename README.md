@@ -32,7 +32,7 @@
 
 # About social fisher
 
-    INFO: Social Fisher (SocFish) is a phishing tool, which is used 
+    INFO: Social Fisher (SocFish) is a phishing tool that is used 
     to get social network credentials using generated malicious link.
 
 # How to install socfish
