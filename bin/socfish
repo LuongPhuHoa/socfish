@@ -97,6 +97,7 @@ sleep 1
 exit
 fi
 
+cd ~
 if [[ -d ~/socfish ]]
 then
 {
