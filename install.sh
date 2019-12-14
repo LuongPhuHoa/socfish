@@ -44,11 +44,11 @@ sleep 0.5
 clear
 sleep 0.5
 cd ~/socfish
-printf "\e[1;92m  ____            \e[0m\e[1;77m _____ _     _     \e[0m\n"
-printf "\e[1;92m / ___|  ___   ___\e[0m\e[1;77m|  ___(_)___| |__  \e[0m\n"
-printf "\e[1;92m \___ \ / _ \ / __|\e[0m\e[1;77m |_  | / __| '_ \ \e[0m\n"
-printf "\e[1;92m  ___) | (_) | (__\e[0m\e[1;77m|  _| | \__ \ | | |\e[0m\n"
-printf "\e[1;92m |____/ \___/ \___|\e[0m\e[1;77m_|   |_|___/_| |_|\e[0m\n"
+printf "\033[1;92m  ____            \033[0m\033[1;77m _____ _     _     \033[0m\n"
+printf "\033[1;92m / ___|  ___   ___\033[0m\033[1;77m|  ___(_)___| |__  \033[0m\n"
+printf "\033[1;92m \___ \ / _ \ / __|\033[0m\033[1;77m |_  | / __| '_ \ \033[0m\n"
+printf "\033[1;92m  ___) | (_) | (__\033[0m\033[1;77m|  _| | \__ \ | | |\033[0m\n"
+printf "\033[1;92m |____/ \___/ \___|\033[0m\033[1;77m_|   |_|___/_| |_|\033[0m\n"
 echo
 
 if [[ -f /etc/socfish.conf ]]
@@ -61,9 +61,9 @@ if [[ "$CONF" = "arm" ]]
 then
 if [[ -d /System/Library/CoreServices/SpringBoard.app ]]
 then
-echo -e "\e[1;77m[\e[0m\e[1;93m+\e[0m\e[1;77m] Installing dependencies...\e[0m"
+echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Installing dependencies...\033[0m"
 else 
-echo -e "\e[1;77m[\e[0m\e[1;93m+\e[0m\e[1;77m] Installing dependencies...\e[0m"
+echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Installing dependencies...\033[0m"
 pkg update
 pkg -y install curl
 pkg -y install php
@@ -77,9 +77,9 @@ if [[ "$CONF" = "amd" ]]
 then
 if [[ -d /System/Library/CoreServices/Finder.app ]]
 then
-echo -e "\e[1;77m[\e[0m\e[1;93m+\e[0m\e[1;77m] Installing dependencies...\e[0m"
+echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Installing dependencies...\033[0m"
 else
-echo -e "\e[1;77m[\e[0m\e[1;93m+\e[0m\e[1;77m] Installing dependencies...\e[0m"
+echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Installing dependencies...\033[0m"
 apt-get update
 apt-get -y install curl
 apt-get -y install php
@@ -93,9 +93,9 @@ if [[ "$CONF" = "intel" ]]
 then
 if [[ -d /System/Library/CoreServices/Finder.app ]]
 then
-echo -e "\e[1;77m[\e[0m\e[1;93m+\e[0m\e[1;77m] Installing dependencies...\e[0m"
+echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Installing dependencies...\033[0m"
 else
-echo -e "\e[1;77m[\e[0m\e[1;93m+\e[0m\e[1;77m] Installing dependencies...\e[0m"
+echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Installing dependencies...\033[0m"
 apt-get update
 apt-get -y install curl
 apt-get -y install php
@@ -106,14 +106,14 @@ fi
 fi
 
 else
-read -e -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Select your architecture (amd/intel/arm): \e[0m' CONF
+read -e -p $'\033[1;92m[\033[0m\033[1;77m+\033[0m\033[1;92m] Select your architecture (amd/intel/arm): \033[0m' CONF
 if [[ "$CONF" = "" ]]
 then
 exit
 else
 if [[ "$CONF" = "arm" ]]
 then
-read -e -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Is this a single board computer (yes/no)? \e[0m' PI
+read -e -p $'\033[1;92m[\033[0m\033[1;77m+\033[0m\033[1;92m] Is this a single board computer (yes/no)? \033[0m' PI
 if [[ "$PI" = "yes" ]]
 then
 echo "amd" >> /etc/socfish.conf
@@ -131,9 +131,9 @@ if [[ "$CONF" = "arm" ]]
 then
 if [[ -d /System/Library/CoreServices/SpringBoard.app ]]
 then
-echo -e "\e[1;77m[\e[0m\e[1;93m+\e[0m\e[1;77m] Installing dependencies...\e[0m"
+echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Installing dependencies...\033[0m"
 else 
-echo -e "\e[1;77m[\e[0m\e[1;93m+\e[0m\e[1;77m] Installing dependencies...\e[0m"
+echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Installing dependencies...\033[0m"
 pkg update
 pkg -y install curl
 pkg -y install php
@@ -147,9 +147,9 @@ if [[ "$CONF" = "amd" ]]
 then
 if [[ -d /System/Library/CoreServices/Finder.app ]]
 then
-echo -e "\e[1;77m[\e[0m\e[1;93m+\e[0m\e[1;77m] Installing dependencies...\e[0m"
+echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Installing dependencies...\033[0m"
 else
-echo -e "\e[1;77m[\e[0m\e[1;93m+\e[0m\e[1;77m] Installing dependencies...\e[0m"
+echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Installing dependencies...\033[0m"
 apt-get update
 apt-get -y install curl
 apt-get -y install php
@@ -163,9 +163,9 @@ if [[ "$CONF" = "intel" ]]
 then
 if [[ -d /System/Library/CoreServices/Finder.app ]]
 then
-echo -e "\e[1;77m[\e[0m\e[1;93m+\e[0m\e[1;77m] Installing dependencies...\e[0m"
+echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Installing dependencies...\033[0m"
 else
-echo -e "\e[1;77m[\e[0m\e[1;93m+\e[0m\e[1;77m] Installing dependencies...\e[0m"
+echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Installing dependencies...\033[0m"
 apt-get update
 apt-get -y install curl
 apt-get -y install php
