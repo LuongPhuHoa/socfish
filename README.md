@@ -59,13 +59,6 @@
 
 > socfish
 
-# How to update socfish
-
-    INFO: To update Social Fisher you 
-    should execute the following command.
-
-> socfish -u
-
 # Social fisher disclaimer
 
     INFO: Usage of the Social Fisher for attacking targets without prior mutual consent is illegal. 
