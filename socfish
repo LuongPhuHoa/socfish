@@ -118,8 +118,79 @@ createpage
 start1
 
 elif [[ $option == 20 ]]; then
-chmod +x bin/socfish
-bin/socfish -u
+#blue start 
+	BS="-e \033[1;34m"
+	BSA="\033[1;34m"
+#color end
+	CE="\033[0m"
+#red start
+	RS="-e \033[1;31m"
+#green start
+	GNS="-e \033[1;92m"
+	GSA="\033[1;92m"
+	RSA="\033[1;31m"
+#white start
+  WHS="\033[0;97m"
+        
+if [[ -d /data/data/com.termux ]]
+then
+if [[ -f /data/data/com.termux/files/usr/bin/socfish ]]
+then
+UPD="true"
+else
+UPD="false"
+fi
+else
+if [[ -f /usr/local/bin/socfish ]]
+then
+UPD="true"
+else
+UPD="false"
+fi
+fi
+{
+ASESR="$( curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
+} &> /dev/null
+if [[ "$ASESR" = "" ]]
+then 
+sleep 1
+echo ""$RS"["$CE"-"$RSA"] Download failed!"$CE""
+sleep 1
+exit
+fi
+if [[ $EUID -ne 0 ]]
+then
+sleep 1
+echo ""$RS"["$CE"-"$RSA"] Permission denied!"$CE""
+sleep 1
+exit
+fi
+sleep 1
+echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Installing update...\033[0m"
+{
+mkdir ~/.socfish
+cp -r ~/socfish/sites ~/.socfish
+rm -rf ~/socfish
+rm /bin/socfish
+rm /usr/local/bin/socfish
+rm /data/data/com.termux/files/usr/bin/socfish
+cd ~
+git clone https://github.com/entynetproject/socfish.git
+if [[ "$UPD" != "true" ]]
+then
+sleep 0
+else
+cd socfish
+chmod +x install.sh
+./install.sh
+fi
+rm -rf ~/socfish/sites
+cp -r ~/.socfish/sites ~/socfish
+rm -rf ~/.socfish
+} &> /dev/null
+echo ""$GNS"["$CE"+"$GSA"] Successfully updated!"$CE""
+sleep 1
+exit
 
 elif [[ $option == 21 ]]; then
 exit 1
