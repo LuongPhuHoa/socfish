@@ -34,6 +34,5 @@ fi
 rm /bin/socfish
 rm /usr/local/bin/socfish
 rm -rf ~/socfish
-rm /etc/socfish.conf
 rm /data/data/com.termux/files/usr/bin/socfish
 } &> /dev/null
