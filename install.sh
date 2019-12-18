@@ -57,7 +57,6 @@ echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Installing dependencies
 sleep 1
 
 {
-
 pkg update
 pkg -y install curl
 pkg -y install php
@@ -70,6 +69,7 @@ apt-get -y install php
 apt-get -y install openssh-server
 apt-get -y install unzip
 apt-get -y install wget
+apk update
 apk add curl
 apk add php
 apk add openssh
@@ -97,11 +97,13 @@ dnf -y install php
 dnf -y install openssh
 dnf -y install unzip
 dnf -y install wget
-eopkg install curl
-eopkg install php
-eopkg install openssh
-eopkg install unzip
-eopkg install wget
+eopkg update-repo
+eopkg -y install curl
+eopkg -y install php
+eopkg -y install openssh
+eopkg -y install unzip
+eopkg -y install wget
+xbps-install -S
 xbps-install -y curl
 xbps-install -y php
 xbps-install -y openssh
