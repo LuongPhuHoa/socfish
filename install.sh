@@ -53,7 +53,7 @@ printf "\033[1;92m |____/ \___/ \___|\033[0m\033[1;77m_|   |_|___/_| |_|\033[0m\
 echo
 
 sleep 1
-echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Installing dependencies...\033[0m"
+echo -e "\033[1;77m[\033[0m\033[1;93m*\033[0m\033[1;77m] Installing dependencies...\033[0m"
 sleep 1
 
 {
@@ -129,3 +129,7 @@ chmod +x /bin/socfish
 cp socfish /data/data/com.termux/files/usr/bin
 chmod +x /data/data/com.termux/files/usr/bin/socfish
 } &> /dev/null
+
+sleep 1
+echo -e "\033[1;92m[\033[0m\033[0m+\033[0m\033[1;92m] Successfully updated!\033[0m"
+sleep 1
