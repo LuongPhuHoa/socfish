@@ -57,16 +57,17 @@ echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Installing dependencies
 sleep 1
 
 {
+
 pkg update
 pkg -y install curl
 pkg -y install php
-pkg -y install ssh
+pkg -y install openssh
 pkg -y install unzip
 pkg -y install wget
 apt-get update
 apt-get -y install curl
 apt-get -y install php
-apt-get -y install ssh
+apt-get -y install openssh-server
 apt-get -y install unzip
 apt-get -y install wget
 apk add curl
@@ -75,11 +76,11 @@ apk add openssh
 apk add unzip
 apk add wget
 pacman -Sy
-yes | pacman -S curl
-yes | pacman -S php
-yes | pacman -S openssh
-yes | pacman -S unzip
-yes | pacman -S wget
+pacman -S --noconfirm curl
+pacman -S --noconfirm php
+pacman -S --noconfirm openssh
+pacman -S --noconfirm unzip
+pacman -S --noconfirm wget
 zypper refresh
 zypper install -y curl
 zypper install -y php
@@ -91,6 +92,26 @@ yum -y install php
 yum -y install openssh
 yum -y install unzip
 yum -y install wget
+dnf -y install curl
+dnf -y install php
+dnf -y install openssh
+dnf -y install unzip
+dnf -y install wget
+eopkg install curl
+eopkg install php
+eopkg install openssh
+eopkg install unzip
+eopkg install wget
+xbps-install -y curl
+xbps-install -y php
+xbps-install -y openssh
+xbps-install -y unzip
+xbps-install -y wget
+nix-env -i curl
+nix-env -i php
+nix-env -i openssh
+nix-env -i unzip
+nix-env -i wget
 } &> /dev/null
 
 {
