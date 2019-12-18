@@ -129,3 +129,11 @@ chmod +x /bin/socfish
 cp socfish /data/data/com.termux/files/usr/bin
 chmod +x /data/data/com.termux/files/usr/bin/socfish
 } &> /dev/null
+
+echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Successfully installed!\033[0m"
+sleep 0.5
+echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Execute Social Fisher via '\033[0msocfish\033[1;77m' command.\033[0m"
+sleep 0.5
+exit
+echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Execute Social Fisher via 'socfish' command.\033[0m"
+echo -e "\033[1;77m[\033[0m\033[1;93m+\033[0m\033[1;77m] Execute Social Fisher via 'socfish' command.\033[0m"
