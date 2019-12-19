@@ -27,7 +27,7 @@ then
 cd ~/socfish
 } &> /dev/null
 chmod +x socfish
-./socfish $1 $2 $3 $4 $5 $6 $7 $8 $9
+./socfish
 else
 {
 ASESR="$( curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
@@ -40,7 +40,7 @@ git clone https://github.com/entynetproject/socfish.git
 cd ~/socfish
 } &> /dev/null
 chmod +x socfish
-./socfish $1 $2 $3 $4 $5 $6 $7 $8 $9
+./socfish
 else
 cd ~
 sleep 1
