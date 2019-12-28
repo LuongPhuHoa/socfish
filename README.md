@@ -30,12 +30,18 @@
  </a>
 </p>
 
-# About social fisher
+***
+
+# About Social Fisher
 
     INFO: Social Fisher (SocFish) is a phishing tool that is used 
     to get social network credentials using generated malicious link.
 
-# How to install socfish
+***
+
+# Getting started
+
+## SocFish installation
 
 > cd socfish
 
@@ -43,7 +49,7 @@
 
 > ./install.sh
 
-# How to uninstall socfish
+## SocFish uninstallation
 
 > cd socfish
 
@@ -51,21 +57,26 @@
 
 > ./uninstall.sh
 
+***
 
-# How to execute socfish
+# Social Fisher execution
 
     INFO: To execute Social Fisher you 
     should execute the following command.
 
 > socfish
 
-# Social fisher disclaimer
+***
+
+# Social Fisher disclaimer
 
     INFO: Usage of the Social Fisher for attacking targets without prior mutual consent is illegal. 
     It is the end user's responsibility to obey all applicable local, state, federal, and international laws. 
     Developers assume no liability and are not responsible for any misuse or damage caused by this program.
 
-# Social fisher license
+***
+
+# Social Fisher license
 
         --------------------------------------------------
                            Social Fisher                     
@@ -84,6 +95,7 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
-        
+    
+***
 
 # Thats all!
